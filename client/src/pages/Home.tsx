@@ -1,8 +1,6 @@
 import Hero from "@/components/home/Hero";
 import ServiceOverview from "@/components/home/ServiceOverview";
 import AboutSection from "@/components/home/AboutSection";
-import TeamSection from "@/components/home/TeamSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FAQSection from "@/components/home/FAQSection";
 import BlogPreviewSection from "@/components/home/BlogPreviewSection";
 import ServicesDetailSection from "@/components/services/ServicesDetailSection";
@@ -16,9 +14,7 @@ const Home = () => {
       <Hero />
       <ServiceOverview />
       <AboutSection />
-      <TeamSection />
       <ServicesDetailSection />
-      <TestimonialsSection />
       
       <section id="referral" className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
