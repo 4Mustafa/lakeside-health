@@ -1,0 +1,163 @@
+Objective:
+
+Design a contemporary website that effectively communicates the services offered by the Housing Stabilization Service, ensuring accessibility and ease of navigation for clients and social workers.
+
+
+
+Reference:
+
+Use Truwell as a benchmark for design aesthetics, content structure, and service presentation.
+
+
+
+Website Structure:
+
+1. Home Page:
+
+• Hero Section:
+
+• Incorporate a welcoming message that encapsulates the organization’s mission.
+
+• Use high-quality imagery that reflects community and support.
+
+• Overview of Services:
+
+• Provide a brief introduction to the services offered, emphasizing Housing Stabilization.
+
+• Call-to-Action (CTA):
+
+• Encourage visitors to learn more about services or to make referrals.
+
+2. About Us:
+
+• Mission and Vision:
+
+• Clearly state the organization’s goals and commitment to the community.
+
+• Team Introduction:
+
+• Highlight key team members with brief bios and photos.
+
+3. Services:
+
+• Housing Stabilization Services (HSS):
+
+• Detail the HSS offerings, including Transition Services, Sustaining Services, and Housing Consultation Services.
+
+• Additional Services:
+
+• If applicable, outline other support services provided by the organization.
+
+4. Referral Form:
+
+• Purpose:
+
+• Facilitate social workers in submitting client referrals directly through the website.
+
+• Form Fields:
+
+• Client Information:
+
+• Full Name
+
+• Date of Birth
+
+• Contact Information
+
+• Referring Social Worker Information:
+
+• Full Name
+
+• Organization
+
+• Contact Information
+
+• Service(s) Requested:
+
+• Checkboxes or dropdowns for available services
+
+• Additional Notes:
+
+• Free-text area for any pertinent information
+
+• Submission Confirmation:
+
+• Provide an on-screen confirmation message and email notification upon successful submission.
+
+5. Contact Us:
+
+• Contact Form:
+
+• Fields for name, email, subject, and message.
+
+• Contact Information:
+
+• Phone number, email address, and physical address.
+
+• Operating Hours:
+
+• List the days and times the organization is available.
+
+
+
+Design Elements:
+
+• Color Scheme:
+
+• Use calming and professional colors that evoke trust and safety.
+
+• Typography:
+
+• Select clear, legible fonts suitable for web readability.
+
+• Imagery:
+
+• Incorporate authentic photos that represent the community served.
+
+• Layout:
+
+• Ensure a responsive design that adapts seamlessly to various devices and screen sizes.
+
+
+
+Content Guidelines:
+
+• Tone:
+
+• Maintain a compassionate and professional tone throughout the website.
+
+• Language:
+
+• Use clear and concise language to ensure accessibility for all visitors.
+
+• SEO Optimization:
+
+• Incorporate relevant keywords to enhance search engine visibility.
+
+
+
+Legal and Compliance:
+
+• Privacy Policy:
+
+• Include a comprehensive privacy policy detailing data handling practices.
+
+• Accessibility:
+
+• Ensure the website complies with ADA standards for web accessibility.
+
+
+
+Additional Features:
+
+• Testimonials:
+
+• Showcase success stories or testimonials from clients and partners.
+
+• Blog/News Section:
+
+• Provide updates, news, and informative articles related to housing stabilization and community support.
+
+• FAQ Section:
+
+• Address common questions and concerns to assist visitors in navigating services.
