@@ -17,16 +17,12 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2">
-            <svg className="w-full h-auto" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="800" height="600" rx="10" fill="#E6F0FF" />
-              <path d="M400 100L600 300H500V500H300V300H200L400 100Z" fill="#2A5DB0" fillOpacity="0.8" />
-              <rect x="325" y="350" width="50" height="50" rx="5" fill="white" />
-              <rect x="425" y="350" width="50" height="50" rx="5" fill="white" />
-              <rect x="325" y="425" width="150" height="75" rx="5" fill="#4ECDC4" />
-              <circle cx="200" cy="200" r="50" fill="#FFD1D1" />
-              <path d="M650 150C650 177.614 627.614 200 600 200C572.386 200 550 177.614 550 150C550 122.386 572.386 100 600 100C627.614 100 650 122.386 650 150Z" fill="#FF6B6B" />
-            </svg>
+          <div className="md:w-1/2 flex justify-center">
+            <img 
+              src="/attached_assets/Lakeside health.png" 
+              alt="Lakeside Health logo" 
+              className="w-full max-w-md h-auto"
+            />
           </div>
         </div>
       </div>
