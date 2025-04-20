@@ -56,7 +56,7 @@ const ServicesDetailSection = () => {
                     <p className="text-neutral-600 text-sm">Creating a plan for the first months in your new home to ensure you have the support you need.</p>
                   </div>
                 </div>
-                <Link href="/referral">
+                <Link href="/referral#client-info">
                   <a className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
@@ -108,7 +108,7 @@ const ServicesDetailSection = () => {
                     <p className="text-neutral-600 text-sm">Education on tenant rights and responsibilities, and communication with landlords.</p>
                   </div>
                 </div>
-                <Link href="/referral">
+                <Link href="/referral#client-info">
                   <a className="inline-block bg-[#4ECDC4] hover:bg-[#38A39A] text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
@@ -160,7 +160,7 @@ const ServicesDetailSection = () => {
                     <p className="text-neutral-600 text-sm">Early intervention support when housing stability is threatened by changing circumstances.</p>
                   </div>
                 </div>
-                <Link href="/referral">
+                <Link href="/referral#client-info">
                   <a className="inline-block bg-neutral-700 hover:bg-neutral-800 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
