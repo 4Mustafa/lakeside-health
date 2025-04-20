@@ -71,7 +71,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             Contact
           </a>
         </Link>
-        <Link href="/referral">
+        <Link href="/referral#client-info">
           <a 
             className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors text-center mt-4"
             onClick={onClose}

@@ -5,17 +5,26 @@ const Referral = () => {
   const clientInfoRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    // Check if the URL has the client-info hash
-    if (window.location.hash === '#client-info') {
-      // Add a slight delay to ensure the DOM is fully rendered
-      setTimeout(() => {
-        // Get the element and scroll to it
-        const element = document.getElementById('client-info');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
+    // Handle scrolling to the client-info section
+    const handleHashChange = () => {
+      if (window.location.hash === '#client-info') {
+        // Add a slight delay to ensure the DOM is fully rendered
+        setTimeout(() => {
+          // Get the element and scroll to it
+          const element = document.getElementById('client-info');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 200);
+      }
+    };
+
+    // Initial check
+    handleHashChange();
+
+    // Listen for hash changes (if user navigates with browser back/forward buttons)
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
   
   return (

@@ -125,7 +125,7 @@ const ReferralForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           {/* Client Information */}
-          <div id="client-info" style={{ scrollMarginTop: "80px" }}>
+          <div id="client-info" style={{ scrollMarginTop: "100px" }}>
             <h3 className="text-xl font-semibold font-heading text-neutral-800 mb-4">Client Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField

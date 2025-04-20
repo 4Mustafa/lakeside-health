@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
           </nav>
           <div className="hidden md:block">
-            <Link href="/referral">
+            <Link href="/referral#client-info">
               <a className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Make a Referral</a>
             </Link>
           </div>
