@@ -10,20 +10,6 @@ const Footer = () => {
               <span className="text-white text-2xl font-bold font-heading">Housing<span className="text-[#4ECDC4]">Stability</span></span>
             </div>
             <p className="text-neutral-300 mb-6">Providing comprehensive support to help individuals and families achieve and maintain housing stability.</p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-neutral-300 hover:text-white transition-colors">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="text-neutral-300 hover:text-white transition-colors">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-neutral-300 hover:text-white transition-colors">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="text-neutral-300 hover:text-white transition-colors">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
           </div>
           
           <div>

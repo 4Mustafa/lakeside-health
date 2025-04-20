@@ -7,7 +7,6 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Referral from "@/pages/Referral";
-import Contact from "@/pages/Contact";
 import Testimonials from "@/pages/Testimonials";
 import FAQ from "@/pages/FAQ";
 import Header from "@/components/layout/Header";
@@ -20,7 +19,6 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
       <Route path="/referral" component={Referral} />
-      <Route path="/contact" component={Contact} />
       <Route path="/testimonials" component={Testimonials} />
       <Route path="/faq" component={FAQ} />
       <Route component={NotFound} />

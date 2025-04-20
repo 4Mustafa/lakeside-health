@@ -51,9 +51,6 @@ const Header = () => {
             <Link href="/faq">
               <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/faq" ? "text-primary" : ""}`}>FAQ</a>
             </Link>
-            <Link href="/contact">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/contact" ? "text-primary" : ""}`}>Contact</a>
-            </Link>
           </nav>
           <div className="hidden md:block">
             <Link href="/referral#client-info">
