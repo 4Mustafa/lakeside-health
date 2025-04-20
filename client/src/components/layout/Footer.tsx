@@ -26,9 +26,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Transition Services</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Sustaining Services</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Housing Consultation</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Primary Care</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Specialty Services</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Community Outreach</a></Link></li>
               <li><Link href="/referral"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Make a Referral</a></Link></li>
             </ul>
           </div>

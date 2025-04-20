@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import lakesideHealthLogo from "@assets/Lakeside health.png";
 
 const Hero = () => {
   return (
@@ -19,15 +18,10 @@ const Hero = () => {
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <img 
-              src={import.meta.env.BASE_URL + 'attached_assets/Lakeside health.png'} 
-              alt="Lakeside Health logo" 
-              className="w-full max-w-md h-auto object-contain"
-              onError={(e) => {
-                console.error('Image failed to load');
-                e.currentTarget.style.display = 'none';
-              }}
-            />
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h2 className="text-3xl font-bold text-primary mb-2">Lakeside Health</h2>
+              <p className="text-neutral-600">Healthcare Services</p>
+            </div>
           </div>
         </div>
       </div>
