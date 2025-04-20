@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <div className="mb-4">
-              <span className="text-white text-2xl font-bold font-heading">Housing<span className="text-[#4ECDC4]">Stability</span></span>
+              <span className="text-white text-2xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></span>
             </div>
-            <p className="text-neutral-300 mb-6">Providing comprehensive support to help individuals and families achieve and maintain housing stability.</p>
+            <p className="text-neutral-300 mb-6">Providing comprehensive healthcare services to help individuals and families achieve and maintain their health and wellbeing.</p>
           </div>
           
           <div>
@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
-                <span>info@housingstability.org</span>
+                <span>info@lakesidehealth.org</span>
               </li>
             </ul>
           </div>
@@ -54,7 +54,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-neutral-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Housing Stabilization Services. All rights reserved.</p>
+            <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Lakeside Health. All rights reserved.</p>
             <div className="flex space-x-6">
               <Link href="/privacy"><a className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors">Privacy Policy</a></Link>
               <Link href="/terms"><a className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors">Terms of Service</a></Link>
