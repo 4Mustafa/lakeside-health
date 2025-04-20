@@ -2,7 +2,6 @@ import Hero from "@/components/home/Hero";
 import ServiceOverview from "@/components/home/ServiceOverview";
 import AboutSection from "@/components/home/AboutSection";
 import FAQSection from "@/components/home/FAQSection";
-import BlogPreviewSection from "@/components/home/BlogPreviewSection";
 import ServicesDetailSection from "@/components/services/ServicesDetailSection";
 import ReferralForm from "@/components/forms/ReferralForm";
 import ContactForm from "@/components/forms/ContactForm";
@@ -30,7 +29,6 @@ const Home = () => {
       </section>
       
       <FAQSection />
-      <BlogPreviewSection />
       
       <section id="contact" className="py-16 bg-neutral-50">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
