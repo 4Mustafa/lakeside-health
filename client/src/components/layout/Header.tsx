@@ -31,30 +31,30 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/">
               <a className="flex items-center">
-                <span className="text-primary text-2xl font-bold font-heading">Housing<span className="text-[#4ECDC4]">Stability</span></span>
+                <span className="text-calming-blue text-2xl font-bold font-heading">Housing<span className="text-muted-teal">Stability</span></span>
               </a>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8 font-medium">
             <Link href="/">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/" ? "text-primary" : ""}`}>Home</a>
+              <a className={`text-charcoal hover:text-calming-blue transition-colors py-2 ${location === "/" ? "text-calming-blue" : ""}`}>Home</a>
             </Link>
             <Link href="/about">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/about" ? "text-primary" : ""}`}>About Us</a>
+              <a className={`text-charcoal hover:text-calming-blue transition-colors py-2 ${location === "/about" ? "text-calming-blue" : ""}`}>About Us</a>
             </Link>
             <Link href="/services">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/services" ? "text-primary" : ""}`}>Services</a>
+              <a className={`text-charcoal hover:text-calming-blue transition-colors py-2 ${location === "/services" ? "text-calming-blue" : ""}`}>Services</a>
             </Link>
             <Link href="/testimonials">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/testimonials" ? "text-primary" : ""}`}>Testimonials</a>
+              <a className={`text-charcoal hover:text-calming-blue transition-colors py-2 ${location === "/testimonials" ? "text-calming-blue" : ""}`}>Testimonials</a>
             </Link>
             <Link href="/faq">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/faq" ? "text-primary" : ""}`}>FAQ</a>
+              <a className={`text-charcoal hover:text-calming-blue transition-colors py-2 ${location === "/faq" ? "text-calming-blue" : ""}`}>FAQ</a>
             </Link>
           </nav>
           <div className="hidden md:block">
             <Link href="/referral#client-info">
-              <a className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Make a Referral</a>
+              <a className="bg-calming-blue hover:bg-calming-blue/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Make a Referral</a>
             </Link>
           </div>
           <button id="mobile-menu-button" className="md:hidden text-neutral-700 focus:outline-none" onClick={toggleMenu}>
