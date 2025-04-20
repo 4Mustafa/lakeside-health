@@ -11,6 +11,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // Default shadcn colors
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -44,6 +45,14 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        
+        // Custom color palette
+        'calming-blue': '#3B7EA1',
+        'muted-teal': '#5BA89D',
+        'warm-sand': '#F2E8D5',
+        'soft-gold': '#D4A055',
+        'charcoal': '#333333',
+        'off-white': '#FAFAF9',
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",

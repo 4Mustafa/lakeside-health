@@ -8,6 +8,46 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-off-white text-charcoal;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-calming-blue;
+  }
+  
+  a {
+    @apply text-calming-blue hover:text-muted-teal transition-colors;
+  }
+
+  .bg-primary {
+    @apply bg-calming-blue;
+  }
+  
+  .bg-primary\/90 {
+    @apply bg-calming-blue/90;
+  }
+  
+  .text-primary {
+    @apply text-calming-blue;
+  }
+  
+  .hover\:bg-primary\/90:hover {
+    @apply hover:bg-calming-blue/90;
+  }
+  
+  .hover\:text-primary:hover {
+    @apply hover:text-calming-blue;
+  }
+  
+  .border-primary {
+    @apply border-calming-blue;
+  }
+  
+  .focus\:ring-primary:focus {
+    @apply focus:ring-calming-blue;
+  }
+  
+  .focus\:border-primary:focus {
+    @apply focus:border-calming-blue;
   }
 }

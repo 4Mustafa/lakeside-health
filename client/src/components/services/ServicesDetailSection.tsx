@@ -66,7 +66,7 @@ const ServicesDetailSection = () => {
           {/* Sustaining Services */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-[#4ECDC4] text-white p-8">
+              <div className="md:w-1/3 bg-muted-teal text-white p-8">
                 <div className="flex items-center mb-4">
                   <ShieldCheck className="h-8 w-8 mr-4" />
                   <h3 className="text-2xl font-bold font-heading">Sustaining Services</h3>
@@ -109,7 +109,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-[#4ECDC4] hover:bg-[#38A39A] text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-muted-teal hover:bg-muted-teal/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
             </div>

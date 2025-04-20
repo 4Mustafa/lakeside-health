@@ -13,7 +13,7 @@ const Hero = () => {
                 <a className="bg-white text-primary hover:bg-neutral-100 font-semibold px-6 py-3 rounded-lg transition-colors text-center">Our Services</a>
               </Link>
               <Link href="/referral">
-                <a className="bg-[#4ECDC4] hover:bg-[#38A39A] text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center">Make a Referral</a>
+                <a className="bg-muted-teal hover:bg-muted-teal/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-center">Make a Referral</a>
               </Link>
             </div>
           </div>
