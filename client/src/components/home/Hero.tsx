@@ -24,20 +24,13 @@ const Hero = () => {
                 </a>
               </Link>
             </div>
-            <p className="text-sm text-neutral-500 mt-4">
-              Need immediate assistance? <a href="tel:5551234567" className="text-primary underline">Call us</a>
-            </p>
           </div>
           
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
               <div className="bg-primary/10 rounded-full w-80 h-80 absolute -top-10 -left-10 z-0"></div>
               <div className="bg-white border border-primary/20 rounded-lg shadow-lg p-6 z-10 relative">
-                <img 
-                  src="/images/lakeside-logo.png" 
-                  alt="Lakeside Health logo" 
-                  className="w-full max-w-md h-auto object-contain"
-                />
+                {/* Content will be added here later */}
               </div>
             </div>
           </div>
