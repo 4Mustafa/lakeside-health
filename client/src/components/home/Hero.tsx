@@ -6,14 +6,6 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
-            <div className="flex items-center mb-6">
-              <img 
-                src="/images/lakeside-logo.png" 
-                alt="Lakeside Health logo" 
-                className="w-16 h-16 mr-4"
-              />
-              <h2 className="text-2xl font-bold text-primary">Lakeside Health</h2>
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 text-primary">
               Where compassionate care meets excellence
             </h1>
@@ -46,14 +38,6 @@ const Hero = () => {
                   alt="Lakeside Health logo" 
                   className="w-full max-w-md h-auto object-contain"
                 />
-                <div className="mt-6 bg-gray-50 p-4 rounded-md">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="font-medium text-primary">Patient Portal</div>
-                    <div className="text-xs text-gray-500">Secure Access</div>
-                  </div>
-                  <div className="h-4 bg-gray-200 rounded-full w-full"></div>
-                  <div className="h-4 bg-gray-200 rounded-full w-3/4 mt-2"></div>
-                </div>
               </div>
             </div>
           </div>

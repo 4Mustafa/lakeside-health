@@ -31,7 +31,12 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/">
               <a className="flex items-center">
-                <span className="text-primary text-2xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></span>
+                <img 
+                  src="/images/lakeside-logo.png" 
+                  alt="Lakeside Health logo" 
+                  className="w-10 h-10 mr-3"
+                />
+                <span className="text-primary text-xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></span>
               </a>
             </Link>
           </div>
