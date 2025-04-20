@@ -17,11 +17,12 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center">
-            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-              <h2 className="text-3xl font-bold text-primary mb-2">Lakeside Health</h2>
-              <p className="text-neutral-600">Healthcare Services</p>
-            </div>
+          <div className="md:w-1/2 flex justify-center items-center">
+            <img 
+              src="/attached_assets/Lakeside health.png" 
+              alt="Lakeside Health logo" 
+              className="w-full max-w-md h-auto object-contain"
+            />
           </div>
         </div>
       </div>
