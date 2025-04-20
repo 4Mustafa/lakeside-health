@@ -3,18 +3,18 @@ import { Home, ShieldCheck, MessageCircle } from "lucide-react";
 
 const ServicesDetailSection = () => {
   return (
-    <section id="services" className="py-16 bg-neutral-50">
+    <section id="services" className="py-16 bg-warm-sand/20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-neutral-800 mb-4">Our Services</h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto">Comprehensive housing support designed to meet you where you are and help you get where you want to be.</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-calming-blue mb-4">Our Services</h2>
+          <p className="text-lg text-charcoal max-w-3xl mx-auto">Comprehensive housing support designed to meet you where you are and help you get where you want to be.</p>
         </div>
         
         <div className="space-y-12">
           {/* Transition Services */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-primary text-white p-8">
+              <div className="md:w-1/3 bg-calming-blue text-white p-8">
                 <div className="flex items-center mb-4">
                   <Home className="h-8 w-8 mr-4" />
                   <h3 className="text-2xl font-bold font-heading">Transition Services</h3>
@@ -57,7 +57,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-calming-blue hover:bg-calming-blue/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
             </div>
@@ -118,7 +118,7 @@ const ServicesDetailSection = () => {
           {/* Housing Consultation */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-neutral-700 text-white p-8">
+              <div className="md:w-1/3 bg-soft-gold text-white p-8">
                 <div className="flex items-center mb-4">
                   <MessageCircle className="h-8 w-8 mr-4" />
                   <h3 className="text-2xl font-bold font-heading">Housing Consultation</h3>
@@ -161,7 +161,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-neutral-700 hover:bg-neutral-800 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-soft-gold hover:bg-soft-gold/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
                 </Link>
               </div>
             </div>

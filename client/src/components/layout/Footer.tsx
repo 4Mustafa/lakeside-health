@@ -26,10 +26,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-white transition-colors">Transition Services</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-white transition-colors">Sustaining Services</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-white transition-colors">Housing Consultation</a></Link></li>
-              <li><Link href="/referral"><a className="text-neutral-300 hover:text-white transition-colors">Make a Referral</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-soft-gold transition-colors">Transition Services</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-soft-gold transition-colors">Sustaining Services</a></Link></li>
+              <li><Link href="/services"><a className="text-neutral-300 hover:text-soft-gold transition-colors">Housing Consultation</a></Link></li>
+              <li><Link href="/referral"><a className="text-neutral-300 hover:text-soft-gold transition-colors">Make a Referral</a></Link></li>
             </ul>
           </div>
           
@@ -56,9 +56,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Housing Stabilization Services. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link href="/privacy"><a className="text-neutral-400 hover:text-white text-sm transition-colors">Privacy Policy</a></Link>
-              <Link href="/terms"><a className="text-neutral-400 hover:text-white text-sm transition-colors">Terms of Service</a></Link>
-              <Link href="/accessibility"><a className="text-neutral-400 hover:text-white text-sm transition-colors">Accessibility</a></Link>
+              <Link href="/privacy"><a className="text-neutral-400 hover:text-soft-gold text-sm transition-colors">Privacy Policy</a></Link>
+              <Link href="/terms"><a className="text-neutral-400 hover:text-soft-gold text-sm transition-colors">Terms of Service</a></Link>
+              <Link href="/accessibility"><a className="text-neutral-400 hover:text-soft-gold text-sm transition-colors">Accessibility</a></Link>
             </div>
           </div>
         </div>
