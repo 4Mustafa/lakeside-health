@@ -3,7 +3,7 @@ import { Home, ShieldCheck, MessageCircle } from "lucide-react";
 
 const ServicesDetailSection = () => {
   return (
-    <section id="services" className="py-16 bg-warm-sand/20">
+    <section id="services" className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-calming-blue mb-4">Our Services</h2>
