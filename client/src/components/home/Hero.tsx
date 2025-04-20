@@ -14,24 +14,23 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/services">
-                <a className="bg-primary text-white hover:bg-primary/90 font-semibold px-8 py-3 rounded-md transition-colors text-center">
+                <div className="bg-primary text-white hover:bg-primary/90 font-semibold px-8 py-3 rounded-md transition-colors text-center cursor-pointer">
                   OUR SERVICES
-                </a>
+                </div>
               </Link>
               <Link href="/referral">
-                <a className="bg-white border border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3 rounded-md transition-colors text-center">
+                <div className="bg-white border border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3 rounded-md transition-colors text-center cursor-pointer">
                   MAKE A REFERRAL
-                </a>
+                </div>
               </Link>
             </div>
           </div>
           
-          <div className="md:w-1/2 flex justify-center">
-            <div className="relative">
-              <div className="bg-primary/10 rounded-full w-80 h-80 absolute -top-10 -left-10 z-0"></div>
-              <div className="bg-white border border-primary/20 rounded-lg shadow-lg p-6 z-10 relative">
-                {/* Content will be added here later */}
-              </div>
+          <div className="md:w-1/2 flex justify-center items-center">
+            <div className="p-6">
+              <p className="text-lg text-neutral-700">
+                Lakeside Health provides comprehensive healthcare services designed to support your wellbeing at every stage of life.
+              </p>
             </div>
           </div>
         </div>

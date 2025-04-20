@@ -31,52 +31,52 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       </div>
       <nav className="flex flex-col p-4 space-y-4 font-medium">
         <Link href="/">
-          <a 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/" ? "text-primary" : ""}`}
+          <div 
+            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Home
-          </a>
+          </div>
         </Link>
         <Link href="/about">
-          <a 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/about" ? "text-primary" : ""}`}
+          <div 
+            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             About Us
-          </a>
+          </div>
         </Link>
         <Link href="/services">
-          <a 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/services" ? "text-primary" : ""}`}
+          <div 
+            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Services
-          </a>
+          </div>
         </Link>
         <Link href="/testimonials">
-          <a 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/testimonials" ? "text-primary" : ""}`}
+          <div 
+            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Testimonials
-          </a>
+          </div>
         </Link>
         <Link href="/faq">
-          <a 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/faq" ? "text-primary" : ""}`}
+          <div 
+            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             FAQ
-          </a>
+          </div>
         </Link>
         <Link href="/referral#client-info">
-          <a 
-            className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors text-center mt-4"
+          <div 
+            className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors text-center mt-4 cursor-pointer"
             onClick={onClose}
           >
             Make a Referral
-          </a>
+          </div>
         </Link>
       </nav>
     </div>

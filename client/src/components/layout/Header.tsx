@@ -30,36 +30,36 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/">
-              <a className="flex items-center">
+              <div className="flex items-center cursor-pointer">
                 <img 
                   src="/images/lakeside-logo.png" 
                   alt="Lakeside Health logo" 
                   className="w-10 h-10 mr-3"
                 />
                 <span className="text-primary text-xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></span>
-              </a>
+              </div>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8 font-medium">
             <Link href="/">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/" ? "text-primary" : ""}`}>Home</a>
+              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}>Home</div>
             </Link>
             <Link href="/about">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/about" ? "text-primary" : ""}`}>About Us</a>
+              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}>About Us</div>
             </Link>
             <Link href="/services">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/services" ? "text-primary" : ""}`}>Services</a>
+              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}>Services</div>
             </Link>
             <Link href="/testimonials">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/testimonials" ? "text-primary" : ""}`}>Testimonials</a>
+              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}>Testimonials</div>
             </Link>
             <Link href="/faq">
-              <a className={`text-neutral-700 hover:text-primary transition-colors py-2 ${location === "/faq" ? "text-primary" : ""}`}>FAQ</a>
+              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}>FAQ</div>
             </Link>
           </nav>
           <div className="hidden md:block">
             <Link href="/referral#client-info">
-              <a className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Make a Referral</a>
+              <div className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors cursor-pointer">Make a Referral</div>
             </Link>
           </div>
           <button id="mobile-menu-button" className="md:hidden text-neutral-700 focus:outline-none" onClick={toggleMenu}>

@@ -26,7 +26,7 @@ const ServiceOverview = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">Our Healthcare Services</h2>
-          <p className="text-lg text-white/90 max-w-3xl mx-auto">Lakeside Health provides comprehensive healthcare services designed to support your wellbeing at every stage of life.</p>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">Quality care for all your health needs with personalized attention and cutting-edge treatment options.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
