@@ -1,6 +1,23 @@
+import { useEffect, useRef } from "react";
 import ReferralForm from "@/components/forms/ReferralForm";
 
 const Referral = () => {
+  const clientInfoRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    // Check if the URL has the client-info hash
+    if (window.location.hash === '#client-info') {
+      // Add a slight delay to ensure the DOM is fully rendered
+      setTimeout(() => {
+        // Get the element and scroll to it
+        const element = document.getElementById('client-info');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+  
   return (
     <div className="pt-8 pb-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -25,7 +42,9 @@ const Referral = () => {
             <p className="text-neutral-600 italic">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
           </div>
           
-          <ReferralForm />
+          <div ref={clientInfoRef}>
+            <ReferralForm />
+          </div>
         </div>
       </div>
     </div>
