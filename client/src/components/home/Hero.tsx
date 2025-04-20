@@ -19,9 +19,9 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 flex justify-center items-center">
             <img 
-              src="/attached_assets/Lakeside health.png" 
+              src="/images/lakeside-logo.png" 
               alt="Lakeside Health logo" 
-              className="w-full max-w-md h-auto object-contain"
+              className="w-full max-w-md h-auto object-contain bg-white p-4 rounded-lg shadow-md"
             />
           </div>
         </div>
