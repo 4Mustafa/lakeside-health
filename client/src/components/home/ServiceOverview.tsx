@@ -22,11 +22,11 @@ const services = [
 
 const ServiceOverview = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-neutral-800 mb-4">Our Healthcare Services</h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto">Lakeside Health provides comprehensive healthcare services designed to support your wellbeing at every stage of life.</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">Our Healthcare Services</h2>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">Lakeside Health provides comprehensive healthcare services designed to support your wellbeing at every stage of life.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -46,7 +46,7 @@ const ServiceOverview = () => {
         
         <div className="text-center mt-12">
           <Link href="/services">
-            <a className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Learn More About Our Services</a>
+            <a className="inline-block bg-white hover:bg-neutral-100 text-primary font-semibold px-6 py-3 rounded-lg transition-colors">Learn More About Our Services</a>
           </Link>
         </div>
       </div>
