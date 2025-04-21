@@ -28,9 +28,13 @@ interface Referral {
 const AdminPage = () => {
   const [exportData, setExportData] = useState<string>("");
   
-  const { data: referrals, isLoading, isError, refetch } = useQuery<Referral[]>({
+  // API returns { success: true, data: Referral[] }
+  const { data: response, isLoading, isError, refetch } = useQuery<{ success: boolean, data: Referral[] }>({
     queryKey: ['/api/referrals'],
   });
+  
+  // Extract referrals array from the response
+  const referrals = response?.data || [];
 
   // Generate CSV data when referrals change
   useEffect(() => {
