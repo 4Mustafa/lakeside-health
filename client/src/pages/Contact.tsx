@@ -62,16 +62,16 @@ const Contact = () => {
               <div className="mt-8">
                 <h4 className="font-semibold text-neutral-800 mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-[#4ECDC4] flex items-center justify-center hover:text-white hover:bg-[#4ECDC4] transition-all duration-300 shadow-sm hover:shadow-md">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-[#4ECDC4] flex items-center justify-center hover:text-white hover:bg-[#4ECDC4] transition-all duration-300 shadow-sm hover:shadow-md">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-[#4ECDC4] flex items-center justify-center hover:text-white hover:bg-[#4ECDC4] transition-all duration-300 shadow-sm hover:shadow-md">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                  <a href="#" className="w-10 h-10 rounded-full bg-primary text-[#4ECDC4] flex items-center justify-center hover:text-white hover:bg-[#4ECDC4] transition-all duration-300 shadow-sm hover:shadow-md">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </div>

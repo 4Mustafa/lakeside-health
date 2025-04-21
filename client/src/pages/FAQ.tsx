@@ -78,10 +78,10 @@ const FAQ = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact">
-                <a className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Contact Us</a>
+                <div className="bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Contact Us</div>
               </Link>
-              <Link href="/referral">
-                <a className="bg-neutral-800 hover:bg-neutral-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Make a Referral</a>
+              <Link href="/#referral">
+                <div className="bg-white border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Make a Referral</div>
               </Link>
             </div>
           </div>
