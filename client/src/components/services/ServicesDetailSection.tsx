@@ -57,7 +57,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Request This Service</a>
                 </Link>
               </div>
             </div>
@@ -109,7 +109,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-[#4ECDC4] hover:bg-[#38A39A] text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-[#4ECDC4] text-white hover:text-[#4ECDC4] hover:bg-white hover:border border-[#4ECDC4] font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Request This Service</a>
                 </Link>
               </div>
             </div>
@@ -161,7 +161,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-[#FF6B6B] hover:bg-[#E05A5A] text-white font-semibold px-5 py-2 rounded-lg transition-colors">Request This Service</a>
+                  <a className="inline-block bg-[#FF6B6B] text-white hover:text-[#FF6B6B] hover:bg-white hover:border border-[#FF6B6B] font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Request This Service</a>
                 </Link>
               </div>
             </div>

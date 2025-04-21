@@ -26,11 +26,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Transition</div></Link></li>
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Sustaining</div></Link></li>
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Consultation</div></Link></li>
-              <li><Link href="/#referral"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Make a Referral</div></Link></li>
-              <li><Link href="/admin"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Admin Portal</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
+              <li><Link href="/#referral"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
+              <li><Link href="/admin"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin Portal</div></Link></li>
             </ul>
           </div>
           
@@ -57,9 +57,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Lakeside Health. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link href="/privacy"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Privacy Policy</div></Link>
-              <Link href="/terms"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Terms of Service</div></Link>
-              <Link href="/accessibility"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Accessibility</div></Link>
+              <Link href="/privacy"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Privacy Policy</div></Link>
+              <Link href="/terms"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Terms of Service</div></Link>
+              <Link href="/accessibility"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Accessibility</div></Link>
             </div>
           </div>
         </div>
