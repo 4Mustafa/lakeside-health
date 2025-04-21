@@ -411,7 +411,7 @@ const ReferralForm = () => {
           <div className="pt-4">
             <Button 
               type="submit" 
-              className="w-full bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="w-full bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
               disabled={submitReferral.isPending}
             >
               {submitReferral.isPending ? "Submitting..." : "Submit Referral"}
