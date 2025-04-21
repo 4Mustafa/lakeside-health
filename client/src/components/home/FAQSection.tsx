@@ -44,7 +44,7 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <div key={index} className="border border-neutral-200 rounded-lg overflow-hidden">
                 <button 
-                  className="w-full flex justify-between items-center p-4 text-left font-semibold bg-white hover:bg-neutral-50 transition-colors focus:outline-none"
+                  className="w-full flex justify-between items-center p-4 text-left font-semibold bg-white hover:bg-neutral-50 hover:text-[#4ECDC4] transition-all duration-300 focus:outline-none"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={openIndex === index}
                 >

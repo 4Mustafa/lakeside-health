@@ -32,7 +32,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       <nav className="flex flex-col p-4 space-y-4 font-medium">
         <Link href="/">
           <div 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Home
@@ -40,7 +40,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </Link>
         <Link href="/about">
           <div 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             About Us
@@ -48,7 +48,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </Link>
         <Link href="/services">
           <div 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Services
@@ -56,7 +56,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </Link>
         <Link href="/testimonials">
           <div 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             Testimonials
@@ -64,7 +64,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </Link>
         <Link href="/faq">
           <div 
-            className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}
             onClick={onClose}
           >
             FAQ

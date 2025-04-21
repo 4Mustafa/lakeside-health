@@ -42,19 +42,19 @@ const Header = () => {
           </div>
           <nav className="hidden md:flex space-x-8 font-medium">
             <Link href="/">
-              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}>Home</div>
+              <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}>Home</div>
             </Link>
             <Link href="/about">
-              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}>About Us</div>
+              <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}>About Us</div>
             </Link>
             <Link href="/services">
-              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}>Services</div>
+              <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}>Services</div>
             </Link>
             <Link href="/testimonials">
-              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}>Testimonials</div>
+              <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}>Testimonials</div>
             </Link>
             <Link href="/faq">
-              <div className={`text-neutral-700 hover:text-primary transition-colors py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}>FAQ</div>
+              <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}>FAQ</div>
             </Link>
           </nav>
           <div className="hidden md:block">

@@ -51,7 +51,7 @@ const ServiceOverview = () => {
         
         <div className="text-center mt-12">
           <Link href="/services">
-            <div className="inline-block bg-white hover:bg-neutral-100 text-primary font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer">
+            <div className="inline-block bg-white border border-white text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md">
               View Our Detailed Service Continuum
             </div>
           </Link>
