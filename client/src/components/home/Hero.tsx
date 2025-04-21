@@ -14,12 +14,12 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/services">
-                <div className="bg-primary text-white hover:bg-primary/90 font-semibold px-8 py-3 rounded-md transition-colors text-center cursor-pointer">
+                <div className="bg-white border border-primary text-primary hover:bg-[#4ECDC4] hover:text-white hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105">
                   OUR SERVICES
                 </div>
               </Link>
-              <Link href="/referral">
-                <div className="bg-white border border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3 rounded-md transition-colors text-center cursor-pointer">
+              <Link href="/#referral">
+                <div className="bg-primary text-[#4ECDC4] hover:text-primary hover:bg-white hover:border hover:border-primary font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md relative overflow-hidden hover:scale-105">
                   MAKE A REFERRAL
                 </div>
               </Link>

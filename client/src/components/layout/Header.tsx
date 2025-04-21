@@ -58,8 +58,8 @@ const Header = () => {
             </Link>
           </nav>
           <div className="hidden md:block">
-            <Link href="/referral#client-info">
-              <div className="bg-primary hover:bg-primary/90 text-white font-semibold px-5 py-2 rounded-lg transition-colors cursor-pointer">Make a Referral</div>
+            <Link href="/#referral">
+              <div className="bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#3B7EA1] font-semibold px-5 py-2 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Make a Referral</div>
             </Link>
           </div>
           <button id="mobile-menu-button" className="md:hidden text-neutral-700 focus:outline-none" onClick={toggleMenu}>
