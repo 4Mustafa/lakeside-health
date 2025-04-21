@@ -22,6 +22,7 @@ function Router() {
       <Route path="/referral" component={Referral} />
       <Route path="/testimonials" component={Testimonials} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
   );
