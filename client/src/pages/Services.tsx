@@ -57,7 +57,7 @@ const Services = () => {
           
           <div className="text-center mt-8">
             <Link href="/referral">
-              <a className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Make a Referral Today</a>
+              <a className="inline-block bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Make a Referral Today</a>
             </Link>
           </div>
         </div>
