@@ -311,8 +311,8 @@ const ReferralForm = () => {
                       />
                     </FormControl>
                     <div className="ml-2 block">
-                      <FormLabel className="font-medium text-neutral-700">Transition Services</FormLabel>
-                      <p className="block text-neutral-500 text-sm">Support for individuals moving into new housing</p>
+                      <FormLabel className="font-medium text-neutral-700">Housing Transition Services</FormLabel>
+                      <p className="block text-neutral-500 text-sm">Assistance securing housing, application support, and move-in coordination</p>
                     </div>
                   </FormItem>
                 )}

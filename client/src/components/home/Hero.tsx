@@ -7,10 +7,10 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 text-primary">
-              Where compassionate care meets excellence
+              Connecting Your Clients to Housing Stability Solutions
             </h1>
             <p className="text-lg text-neutral-700 mb-8">
-              We help individuals and families maintain their health and wellbeing with personalized healthcare services and a commitment to community wellness.
+              Lakeside Health provides comprehensive Housing Stabilization Services for vulnerable Minnesotans. As a trusted MA-billable provider, we partner with social workers and case managers to support clients facing housing instability.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/services">
@@ -27,9 +27,13 @@ const Hero = () => {
           </div>
           
           <div className="md:w-1/2 flex justify-center items-center">
-            <div className="p-6">
-              <p className="text-lg text-neutral-700">
-                Lakeside Health provides comprehensive healthcare services designed to support your wellbeing at every stage of life.
+            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
+              <h3 className="text-xl font-bold mb-3 text-primary">A Reliable Housing Partner for Your Client Referrals</h3>
+              <p className="text-neutral-700 mb-3">
+                We understand the challenges you face when supporting clients with housing needs. Lakeside Health offers a streamlined referral process and evidence-based approaches to help your clients establish and maintain stable housing.
+              </p>
+              <p className="text-neutral-700">
+                Our professional team handles the housing-specific components of your clients' care plans, allowing you to focus on other critical aspects of their wellbeing.
               </p>
             </div>
           </div>
