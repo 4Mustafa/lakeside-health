@@ -331,8 +331,8 @@ const ReferralForm = () => {
                       />
                     </FormControl>
                     <div className="ml-2 block">
-                      <FormLabel className="font-medium text-neutral-700">Sustaining Services</FormLabel>
-                      <p className="block text-neutral-500 text-sm">Ongoing support to maintain housing stability</p>
+                      <FormLabel className="font-medium text-neutral-700">Housing Sustaining Services</FormLabel>
+                      <p className="block text-neutral-500 text-sm">Living skills development, landlord mediation, and early intervention for housing issues</p>
                     </div>
                   </FormItem>
                 )}
@@ -351,8 +351,8 @@ const ReferralForm = () => {
                       />
                     </FormControl>
                     <div className="ml-2 block">
-                      <FormLabel className="font-medium text-neutral-700">Housing Consultation</FormLabel>
-                      <p className="block text-neutral-500 text-sm">Expert guidance on housing options and rights</p>
+                      <FormLabel className="font-medium text-neutral-700">Housing Consultation Services</FormLabel>
+                      <p className="block text-neutral-500 text-sm">Comprehensive assessments, person-centered planning, and barrier identification strategies</p>
                     </div>
                   </FormItem>
                 )}

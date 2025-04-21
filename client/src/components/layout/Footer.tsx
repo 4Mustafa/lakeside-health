@@ -9,27 +9,27 @@ const Footer = () => {
             <div className="mb-4">
               <span className="text-white text-2xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></span>
             </div>
-            <p className="text-neutral-300 mb-6">Providing comprehensive healthcare services to help individuals and families achieve and maintain their health and wellbeing.</p>
+            <p className="text-neutral-300 mb-6">Providing Housing Stabilization Services to help individuals find, secure, and maintain safe and stable housing in their communities.</p>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Home</a></Link></li>
-              <li><Link href="/about"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">About Us</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Services</a></Link></li>
-              <li><Link href="/testimonials"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Testimonials</a></Link></li>
-              <li><Link href="/faq"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">FAQ</a></Link></li>
+              <li><Link href="/"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Home</div></Link></li>
+              <li><Link href="/about"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">About Us</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Services</div></Link></li>
+              <li><Link href="/testimonials"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Testimonials</div></Link></li>
+              <li><Link href="/faq"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">FAQ</div></Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Primary Care</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Specialty Services</a></Link></li>
-              <li><Link href="/services"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Community Outreach</a></Link></li>
-              <li><Link href="/referral"><a className="text-neutral-300 hover:text-[#4ECDC4] transition-colors">Make a Referral</a></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Transition</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Sustaining</div></Link></li>
+              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Housing Consultation</div></Link></li>
+              <li><Link href="/#referral"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-colors cursor-pointer">Make a Referral</div></Link></li>
             </ul>
           </div>
           
@@ -56,9 +56,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Lakeside Health. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link href="/privacy"><a className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors">Privacy Policy</a></Link>
-              <Link href="/terms"><a className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors">Terms of Service</a></Link>
-              <Link href="/accessibility"><a className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors">Accessibility</a></Link>
+              <Link href="/privacy"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Privacy Policy</div></Link>
+              <Link href="/terms"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Terms of Service</div></Link>
+              <Link href="/accessibility"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-colors cursor-pointer">Accessibility</div></Link>
             </div>
           </div>
         </div>
