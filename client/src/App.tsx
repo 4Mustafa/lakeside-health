@@ -9,6 +9,7 @@ import Services from "@/pages/Services";
 import Referral from "@/pages/Referral";
 import Testimonials from "@/pages/Testimonials";
 import FAQ from "@/pages/FAQ";
+import AdminPage from "@/pages/Admin";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
