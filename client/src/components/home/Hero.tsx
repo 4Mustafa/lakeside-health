@@ -19,7 +19,7 @@ const Hero = () => {
                 </div>
               </Link>
               <Link href="/#referral">
-                <div className="bg-primary text-[#4ECDC4] hover:text-primary hover:bg-white hover:border hover:border-primary font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md relative overflow-hidden hover:scale-105">
+                <div className="bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md relative overflow-hidden hover:scale-105">
                   MAKE A REFERRAL
                 </div>
               </Link>
