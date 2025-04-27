@@ -72,7 +72,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </Link>
         <Link href="/#referral">
           <div 
-            className="bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 text-center mt-4 cursor-pointer shadow-sm hover:shadow-md"
+            className="bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 text-center mt-4 cursor-pointer shadow-sm hover:shadow-md"
             onClick={onClose}
           >
             Make a Referral

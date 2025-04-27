@@ -110,7 +110,7 @@ const AdminPage = () => {
           <div className="text-center">
             <h2 className="text-2xl font-bold text-red-600 mb-4">Error Loading Data</h2>
             <p className="mb-4">There was a problem loading the referrals. Please try again.</p>
-            <Button onClick={() => refetch()} className="bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md">
+            <Button onClick={() => refetch()} className="bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md">
               Try Again
             </Button>
           </div>
@@ -128,7 +128,7 @@ const AdminPage = () => {
             <RefreshCw className="h-4 w-4" />
             Refresh Data
           </Button>
-          <Button onClick={downloadCSV} className="flex items-center gap-2 bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md" disabled={!referrals || referrals.length === 0}>
+          <Button onClick={downloadCSV} className="flex items-center gap-2 bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md" disabled={!referrals || referrals.length === 0}>
             <Download className="h-4 w-4" />
             Export to Excel (CSV)
           </Button>
