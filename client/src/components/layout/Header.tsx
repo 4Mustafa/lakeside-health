@@ -57,11 +57,7 @@ const Header = () => {
               <div className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}>FAQ</div>
             </Link>
           </nav>
-          <div className="hidden md:block">
-            <Link href="/#referral">
-              <div className="bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Make a Referral</div>
-            </Link>
-          </div>
+
           <button id="mobile-menu-button" className="md:hidden text-neutral-700 focus:outline-none" onClick={toggleMenu}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
