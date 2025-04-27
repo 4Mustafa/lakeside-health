@@ -44,15 +44,9 @@ const Hero = () => {
               <p className="text-neutral-700 mb-3">
                 We understand the challenges you face when supporting clients with housing needs. Lakeside Health offers a streamlined referral process and evidence-based approaches to help your clients establish and maintain stable housing.
               </p>
-              <p className="text-neutral-700 mb-4">
+              <p className="text-neutral-700">
                 Our professional team handles the housing-specific components of your clients' care plans, allowing you to focus on other critical aspects of their wellbeing.
               </p>
-              <div className="flex items-center text-sm text-primary font-medium">
-                <svg className="h-5 w-5 mr-2 text-[#4ECDC4]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                Guaranteed 24-hour response to all referrals
-              </div>
             </div>
           </div>
         </div>
