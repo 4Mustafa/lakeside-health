@@ -13,40 +13,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 items-stretch">
-          <div className="md:w-1/2 bg-white rounded-xl shadow-sm border border-neutral-100 p-8 flex flex-col">
-            <h3 className="text-xl font-bold mb-4 text-primary">How We Support Your Clients</h3>
-            
-            <div className="bg-[#4ECDC4]/10 border-l-4 border-[#4ECDC4] p-4 mb-6 rounded-r-md h-[100px] flex flex-col justify-center">
-              <p className="font-semibold text-primary flex items-center">
-                <span className="mr-2">
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </span>
-                Evidence-Based Approach
-              </p>
-              <p className="text-neutral-700 text-sm mt-1">Our proven methods are backed by research and continuously refined for optimal results.</p>
-            </div>
-            
-            <p className="text-neutral-700 mb-4">
-              We understand the challenges you face when supporting clients with housing needs. Lakeside Health offers a streamlined referral process and evidence-based approaches to help your clients establish and maintain stable housing.
-            </p>
-            <p className="text-neutral-700 mb-4">
-              Our professional team handles the housing-specific components of your clients' care plans, allowing you to focus on other critical aspects of their wellbeing.
-            </p>
-            
-            <div className="mt-auto pt-4">
-              <div 
-                onClick={() => window.location.href = '/services'} 
-                className="bg-white border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105 w-full"
-              >
-                OUR SERVICES
-              </div>
-            </div>
-          </div>
-          
-          <div className="md:w-1/2 bg-primary/5 rounded-xl shadow-sm border border-primary/10 p-8 flex flex-col">
+        <div className="flex flex-col items-stretch">
+          <div className="bg-primary/5 rounded-xl shadow-sm border border-primary/10 p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 text-primary">A Reliable Housing Partner for Your Client Referrals</h3>
             
             <div className="bg-[#4ECDC4]/10 border-l-4 border-[#4ECDC4] p-4 mb-6 rounded-r-md h-[100px] flex flex-col justify-center">
