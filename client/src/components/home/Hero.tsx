@@ -14,26 +14,41 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
-          <div className="md:w-1/2 bg-white rounded-xl shadow-sm border border-neutral-100 p-8">
+          <div className="md:w-1/2 bg-white rounded-xl shadow-sm border border-neutral-100 p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 text-primary">How We Support Your Clients</h3>
-            <p className="text-neutral-700 mb-6">
+            
+            <div className="bg-primary/5 border-l-4 border-primary/20 p-4 mb-6 rounded-r-md">
+              <p className="font-medium text-primary flex items-center">
+                <span className="mr-2">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </span>
+                Evidence-Based Approach
+              </p>
+              <p className="text-neutral-700 text-sm mt-1">Our methods are proven effective through research and ongoing evaluation.</p>
+            </div>
+            
+            <p className="text-neutral-700 mb-4">
               We understand the challenges you face when supporting clients with housing needs. Lakeside Health offers a streamlined referral process and evidence-based approaches to help your clients establish and maintain stable housing.
             </p>
-            <p className="text-neutral-700 mb-6">
+            <p className="text-neutral-700 mb-4">
               Our professional team handles the housing-specific components of your clients' care plans, allowing you to focus on other critical aspects of their wellbeing.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-auto">
+            
+            <div className="mt-auto pt-4">
               <div 
                 onClick={() => window.location.href = '/services'} 
-                className="bg-white border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105"
+                className="bg-white border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105 w-full"
               >
                 OUR SERVICES
               </div>
             </div>
           </div>
           
-          <div className="md:w-1/2 bg-primary/5 rounded-xl shadow-sm border border-primary/10 p-8">
+          <div className="md:w-1/2 bg-primary/5 rounded-xl shadow-sm border border-primary/10 p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 text-primary">A Reliable Housing Partner for Your Client Referrals</h3>
+            
             <div className="bg-[#4ECDC4]/10 border-l-4 border-[#4ECDC4] p-4 mb-6 rounded-r-md">
               <p className="font-semibold text-primary flex items-center">
                 <span className="mr-2">
@@ -45,13 +60,15 @@ const Hero = () => {
               </p>
               <p className="text-neutral-700 text-sm mt-1">Every referral receives a professional response within 24 hours – we prioritize your clients' needs.</p>
             </div>
-            <p className="text-neutral-700 mb-6">
+            
+            <p className="text-neutral-700 mb-4">
               Lakeside Health ensures all referrals are processed promptly with our streamlined system. We work closely with social workers and case managers to provide comprehensive housing stabilization services.
             </p>
-            <p className="text-neutral-700 mb-6">
+            <p className="text-neutral-700 mb-4">
               Our team of dedicated housing specialists will coordinate with you every step of the way to ensure your clients receive the support they need.
             </p>
-            <div className="flex flex-col sm:flex-row mt-auto">
+            
+            <div className="mt-auto pt-4">
               <div 
                 onClick={() => window.location.href = '/#referral'}
                 className="bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105 w-full"
