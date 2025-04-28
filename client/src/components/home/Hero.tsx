@@ -36,12 +36,12 @@ const Hero = () => {
               Our team of dedicated housing specialists will coordinate with you every step of the way to ensure your clients receive the support they need.
             </p>
             
-            <div className="mt-auto pt-4">
+            <div className="flex justify-center mt-6">
               <div 
                 onClick={() => window.location.href = '/#referral'}
-                className="bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-8 py-3 rounded-md transition-all duration-300 text-center cursor-pointer shadow-sm hover:shadow-md hover:scale-105 w-full"
+                className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-12 py-4 rounded-lg transition-all duration-300 text-center cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 max-w-md"
               >
-                MAKE A REFERRAL
+                Make a Referral
               </div>
             </div>
           </div>
