@@ -17,11 +17,11 @@ const Hero = () => {
           <div className="md:w-1/2 bg-white rounded-xl shadow-sm border border-neutral-100 p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 text-primary">How We Support Your Clients</h3>
             
-            <div className="bg-primary/5 border-l-4 border-primary/20 p-4 mb-6 rounded-r-md">
-              <p className="font-medium text-primary flex items-center">
+            <div className="bg-[#4ECDC4]/10 border-l-4 border-[#4ECDC4] p-4 mb-6 rounded-r-md">
+              <p className="font-semibold text-primary flex items-center">
                 <span className="mr-2">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </span>
                 Evidence-Based Approach
