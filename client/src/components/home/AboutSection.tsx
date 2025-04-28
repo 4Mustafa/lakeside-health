@@ -23,15 +23,15 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center">
-            <div className="bg-white p-12 flex flex-col items-center max-w-md">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/2 mb-8 md:mb-0 flex items-start justify-center">
+            <div className="bg-white flex flex-col items-center max-w-md">
               <img 
                 src="/images/lakeside-logo.png" 
                 alt="Lakeside Health logo" 
-                className="w-64 h-64 mb-6"
+                className="w-96 h-96"
               />
-              <div className="text-center">
+              <div className="text-center mt-2">
                 <h3 className="text-primary text-3xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></h3>
               </div>
             </div>
