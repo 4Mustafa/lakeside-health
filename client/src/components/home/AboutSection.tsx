@@ -29,11 +29,10 @@ const AboutSection = () => {
               <img 
                 src="/images/lakeside-logo.png" 
                 alt="Lakeside Health logo" 
-                className="w-48 h-48 mb-6"
+                className="w-64 h-64 mb-6"
               />
               <div className="text-center">
-                <h3 className="text-primary text-3xl font-bold font-heading mb-2">Lakeside <span className="text-[#4ECDC4]">Health</span></h3>
-                <p className="text-neutral-600">Housing Stabilization Services</p>
+                <h3 className="text-primary text-3xl font-bold font-heading">Lakeside <span className="text-[#4ECDC4]">Health</span></h3>
               </div>
             </div>
           </div>
