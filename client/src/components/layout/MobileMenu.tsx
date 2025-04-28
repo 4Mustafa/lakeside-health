@@ -54,12 +54,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             Services
           </div>
         </Link>
-        <Link href="/testimonials">
+        <Link href="/referral">
           <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/testimonials" ? "text-primary" : ""}`}
+            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/referral" ? "text-primary" : ""}`}
             onClick={onClose}
           >
-            Testimonials
+            Make a Referral
           </div>
         </Link>
         <Link href="/faq">
