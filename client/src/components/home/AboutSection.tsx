@@ -21,11 +21,11 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-neutral-50">
+    <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center">
-            <div className="bg-white rounded-lg shadow-lg p-12 flex flex-col items-center max-w-md">
+            <div className="bg-white p-12 flex flex-col items-center max-w-md">
               <img 
                 src="/images/lakeside-logo.png" 
                 alt="Lakeside Health logo" 
