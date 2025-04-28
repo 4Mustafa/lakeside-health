@@ -75,24 +75,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-neutral-800 mb-8 text-center">Our History</h2>
-          
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-neutral-600 mb-6">
-              The Housing Stabilization Service was founded in 2010 in response to the growing housing crisis affecting our community. What began as a small initiative by a group of concerned social workers has grown into a comprehensive service organization that has helped thousands of individuals and families find and maintain stable housing.
-            </p>
-            <p className="text-lg text-neutral-600 mb-6">
-              Over the years, we have expanded our services to address the evolving needs of our community, developing specialized programs for families, seniors, and individuals transitioning from homelessness. Our evidence-based approaches and commitment to client-centered care have established us as a leader in housing stability services.
-            </p>
-            <p className="text-lg text-neutral-600">
-              Today, we continue to grow and adapt, forging new partnerships and implementing innovative strategies to address the complex housing challenges faced by our community members. Through it all, we remain dedicated to our core mission of promoting housing stability as a foundation for health, wellbeing, and community participation.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

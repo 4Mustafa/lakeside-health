@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { CheckCircle } from "lucide-react";
 
 const AboutSection = () => {
@@ -53,9 +52,7 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-            <Link href="/about">
-              <a className="inline-block bg-neutral-800 hover:bg-neutral-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Meet Our Team</a>
-            </Link>
+
           </div>
         </div>
       </div>
