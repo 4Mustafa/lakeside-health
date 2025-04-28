@@ -24,16 +24,18 @@ const AboutSection = () => {
     <section id="about" className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <svg className="w-full h-auto rounded-lg shadow-lg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="800" height="600" rx="10" fill="#F0F4F8" />
-              <rect x="50" y="50" width="700" height="500" rx="10" fill="#D1DAE8" />
-              <circle cx="400" cy="180" r="100" fill="#B9C6DA" />
-              <rect x="250" y="320" width="300" height="200" rx="10" fill="#8595AD" />
-              <circle cx="325" cy="390" r="25" fill="#E9EEF6" />
-              <circle cx="475" cy="390" r="25" fill="#E9EEF6" />
-              <path d="M350 440H450" stroke="#E9EEF6" strokeWidth="10" strokeLinecap="round" />
-            </svg>
+          <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center">
+            <div className="bg-white rounded-lg shadow-lg p-12 flex flex-col items-center max-w-md">
+              <img 
+                src="/images/lakeside-logo.png" 
+                alt="Lakeside Health logo" 
+                className="w-48 h-48 mb-6"
+              />
+              <div className="text-center">
+                <h3 className="text-primary text-3xl font-bold font-heading mb-2">Lakeside <span className="text-[#4ECDC4]">Health</span></h3>
+                <p className="text-neutral-600">Housing Stabilization Services</p>
+              </div>
+            </div>
           </div>
           <div className="md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-neutral-800 mb-4">About Our Mission</h2>
