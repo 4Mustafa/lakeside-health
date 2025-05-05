@@ -1,6 +1,15 @@
 import { Link } from "wouter";
+import { useCallback } from "react";
 
 const Footer = () => {
+  // Function to scroll to top when a link is clicked
+  const handleLinkClick = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+  
   return (
     <footer className="bg-neutral-800 text-white py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -15,20 +24,20 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></Link></li>
-              <li><Link href="/about#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></Link></li>
-              <li><Link href="/services#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></Link></li>
-              <li><Link href="/referral#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
-              <li><Link href="/faq#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></Link></li>
+              <li><Link href="/" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></Link></li>
+              <li><Link href="/about" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></Link></li>
+              <li><Link href="/services" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></Link></li>
+              <li><Link href="/referral" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
+              <li><Link href="/faq" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
-              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
-              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
+              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
+              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
+              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
               <li><Link href="/admin"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin</div></Link></li>
             </ul>
           </div>
