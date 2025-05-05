@@ -25,16 +25,13 @@ const Home = () => {
               <p className="text-lg text-neutral-600">For social workers and case managers to refer clients to our Housing Stabilization Services.</p>
             </div>
             
-            <Card className="p-6 bg-neutral-50 rounded-xl shadow-md mb-8">
-              <div className="text-center">
-                <p className="text-lg mb-6">Please use our referral form to submit client information for housing stabilization services.</p>
-                <Link href="/referral">
-                  <Button size="lg" className="font-medium">
-                    Open Referral Form
-                  </Button>
-                </Link>
-              </div>
-            </Card>
+            <div className="text-center">
+              <Link href="/referral">
+                <Button size="lg" className="font-medium px-8 py-6 text-lg">
+                  Make a Referral
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
