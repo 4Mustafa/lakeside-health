@@ -15,21 +15,20 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></Link></li>
-              <li><Link href="/about"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></Link></li>
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></Link></li>
-              <li><Link href="/referral"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
-              <li><Link href="/faq"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></Link></li>
+              <li><Link href="/#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></Link></li>
+              <li><Link href="/about#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></Link></li>
+              <li><Link href="/services#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></Link></li>
+              <li><Link href="/referral#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
+              <li><Link href="/faq#"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
-              <li><Link href="/services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
-              <li><Link href="/contact"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Contact Us</div></Link></li>
+              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
+              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
+              <li><Link href="/services#services"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
               <li><Link href="/admin"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin</div></Link></li>
             </ul>
           </div>
