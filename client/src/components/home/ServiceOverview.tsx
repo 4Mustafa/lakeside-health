@@ -1,6 +1,6 @@
-import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
-import { Home, UserCheck, ClipboardCheck, ShieldCheck, Activity } from "lucide-react";
+import { Home, UserCheck, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { navigateTo } from "@/lib/utils";
 
 const services = [
   {
@@ -34,9 +34,12 @@ const ServiceOverview = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">Housing Stabilization Services</h2>
             <p className="text-lg text-white/90">As a certified Minnesota Housing Stabilization Services provider, we deliver MA-billable services that complement your existing case management.</p>
             <div className="mt-8">
-              <Link href="/services" className="inline-block bg-white border border-white text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md">
+              <div 
+                onClick={() => navigateTo("/services")} 
+                className="inline-block bg-white border border-white text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
+              >
                 View Our Detailed Service Continuum
-              </Link>
+              </div>
             </div>
           </div>
           

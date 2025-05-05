@@ -1,4 +1,5 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
+import { navigateTo } from "@/lib/utils";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -30,46 +31,51 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </button>
       </div>
       <nav className="flex flex-col p-4 space-y-4 font-medium">
-        <Link href="/">
-          <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}
-            onClick={onClose}
-          >
-            Home
-          </div>
-        </Link>
-        <Link href="/about">
-          <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}
-            onClick={onClose}
-          >
-            About Us
-          </div>
-        </Link>
-        <Link href="/services">
-          <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}
-            onClick={onClose}
-          >
-            Services
-          </div>
-        </Link>
-        <Link href="/referral">
-          <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/referral" ? "text-primary" : ""}`}
-            onClick={onClose}
-          >
-            Make a Referral
-          </div>
-        </Link>
-        <Link href="/faq">
-          <div 
-            className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}
-            onClick={onClose}
-          >
-            FAQ
-          </div>
-        </Link>
+        <div 
+          className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/" ? "text-primary" : ""}`}
+          onClick={() => {
+            onClose();
+            navigateTo("/");
+          }}
+        >
+          Home
+        </div>
+        <div 
+          className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/about" ? "text-primary" : ""}`}
+          onClick={() => {
+            onClose();
+            navigateTo("/about");
+          }}
+        >
+          About Us
+        </div>
+        <div 
+          className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/services" ? "text-primary" : ""}`}
+          onClick={() => {
+            onClose();
+            navigateTo("/services");
+          }}
+        >
+          Services
+        </div>
+        <div 
+          className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/referral" ? "text-primary" : ""}`}
+          onClick={() => {
+            onClose();
+            navigateTo("/referral");
+          }}
+        >
+          Make a Referral
+        </div>
+        <div 
+          className={`text-neutral-700 hover:text-[#4ECDC4] transition-all duration-300 py-2 cursor-pointer ${location === "/faq" ? "text-primary" : ""}`}
+          onClick={() => {
+            onClose();
+            navigateTo("/faq");
+          }}
+        >
+          FAQ
+        </div>
 
       </nav>
     </div>

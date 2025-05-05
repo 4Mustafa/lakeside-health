@@ -1,13 +1,11 @@
 import { Link } from "wouter";
 import { useCallback } from "react";
+import { scrollToTop, navigateTo } from "@/lib/utils";
 
 const Footer = () => {
   // Function to scroll to top when a link is clicked
   const handleLinkClick = useCallback(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    scrollToTop();
   }, []);
   
   return (
@@ -24,21 +22,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></Link></li>
-              <li><Link href="/about" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></Link></li>
-              <li><Link href="/services" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></Link></li>
-              <li><Link href="/referral" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></Link></li>
-              <li><Link href="/faq" onClick={handleLinkClick}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></Link></li>
+              <li><div onClick={() => navigateTo("/")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Home</div></li>
+              <li><div onClick={() => navigateTo("/about")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">About Us</div></li>
+              <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Services</div></li>
+              <li><div onClick={() => navigateTo("/referral")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Make a Referral</div></li>
+              <li><div onClick={() => navigateTo("/faq")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">FAQ</div></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></Link></li>
-              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></Link></li>
-              <li><Link href="/services" onClick={(e) => { e.preventDefault(); window.location.href = '/services'; handleLinkClick(); }}><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></Link></li>
-              <li><Link href="/admin"><div className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin</div></Link></li>
+              <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></li>
+              <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></li>
+              <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></li>
+              <li><div onClick={() => navigateTo("/admin")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin</div></li>
             </ul>
           </div>
           
