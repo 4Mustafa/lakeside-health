@@ -18,3 +18,20 @@ export function formatDate(date: Date): string {
     return 'Invalid date';
   }
 }
+
+// Function to scroll to top of page - used after navigation
+export function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Function to navigate to a new page and scroll to top
+export function navigateTo(path: string) {
+  // Change the location
+  window.location.href = path;
+  
+  // Scroll to top
+  scrollToTop();
+}

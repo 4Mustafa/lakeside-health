@@ -2,8 +2,7 @@ import Hero from "@/components/home/Hero";
 import ServiceOverview from "@/components/home/ServiceOverview";
 import WhyPartnerSection from "@/components/home/WhyPartnerSection";
 import EligibilitySection from "@/components/home/EligibilitySection";
-import { Card } from "@/components/ui/card";
-import { Link } from "wouter";
+import { navigateTo } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const Home = () => {
@@ -29,9 +28,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 className="font-medium px-8 py-6 text-lg"
-                onClick={() => {
-                  window.location.href = "/referral#top";
-                }}
+                onClick={() => navigateTo("/referral")}
               >
                 Make a Referral
               </Button>

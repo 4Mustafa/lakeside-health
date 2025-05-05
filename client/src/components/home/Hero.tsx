@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { navigateTo } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -39,9 +40,7 @@ const Hero = () => {
             <div className="flex justify-center mt-6">
               <Button
                 className="bg-primary text-white hover:bg-[#4ECDC4] font-semibold px-12 py-6 text-lg rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                onClick={() => {
-                  window.location.href = "/referral#top";
-                }}
+                onClick={() => navigateTo("/referral")}
               >
                 Make a Referral
               </Button>
