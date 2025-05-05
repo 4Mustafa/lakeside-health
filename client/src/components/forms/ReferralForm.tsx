@@ -129,6 +129,7 @@ const ReferralForm = () => {
         duration: 5000,
       });
     } catch (error) {
+      setIsSubmitting(false);
       toast({
         title: "Submission Error",
         description: "There was a problem submitting your referral. Please try again.",
@@ -447,9 +448,9 @@ const ReferralForm = () => {
             <Button 
               type="submit" 
               className="w-full bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
-              disabled={submitReferral.isPending}
+              disabled={isSubmitting}
             >
-              {submitReferral.isPending ? "Submitting..." : "Submit Referral"}
+              {isSubmitting ? "Submitting..." : "Submit Referral"}
             </Button>
           </div>
         </form>
