@@ -15,23 +15,27 @@ const ServicesDetailSection = () => {
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3 bg-primary text-white p-8">
-                <div className="flex items-center mb-4">
-                  <Home className="h-8 w-8 mr-4" />
-                  <h3 className="text-2xl font-bold font-heading">Transition Services</h3>
+                <div className="mb-6">
+                  <div className="flex items-center mb-4">
+                    <Home className="h-8 w-8 mr-4 flex-shrink-0" />
+                    <h3 className="text-2xl font-bold font-heading">Transition Services</h3>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">Supporting individuals and families as they move into new housing situations.</p>
                 </div>
-                <p className="text-white/90 mb-6">Supporting individuals and families as they move into new housing situations.</p>
-                <ul className="space-y-2">
+                
+                <h4 className="text-lg font-semibold mb-3 text-white">Key Features:</h4>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Housing search assistance</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Housing search assistance to find the right place for your needs and budget</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Move-in coordination</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Move-in coordination including logistics planning and essential resources</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Initial stability planning</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Initial stability planning to ensure a smooth transition</span>
                   </li>
                 </ul>
               </div>
@@ -67,23 +71,27 @@ const ServicesDetailSection = () => {
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3 bg-[#4ECDC4] text-white p-8">
-                <div className="flex items-center mb-4">
-                  <ShieldCheck className="h-8 w-8 mr-4" />
-                  <h3 className="text-2xl font-bold font-heading">Sustaining Services</h3>
+                <div className="mb-6">
+                  <div className="flex items-center mb-4">
+                    <ShieldCheck className="h-8 w-8 mr-4 flex-shrink-0" />
+                    <h3 className="text-2xl font-bold font-heading">Sustaining Services</h3>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">Ongoing support to help maintain housing stability long-term.</p>
                 </div>
-                <p className="text-white/90 mb-6">Ongoing support to help maintain housing stability long-term.</p>
-                <ul className="space-y-2">
+                
+                <h4 className="text-lg font-semibold mb-3 text-white">Key Features:</h4>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Budget management</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Budget management services to ensure housing costs remain sustainable</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Tenant rights education</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Tenant rights education so you understand your protections under the law</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Community connection</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Community connection to build your local support network</span>
                   </li>
                 </ul>
               </div>
@@ -119,23 +127,27 @@ const ServicesDetailSection = () => {
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3 bg-[#FF6B6B] text-white p-8">
-                <div className="flex items-center mb-4">
-                  <MessageCircle className="h-8 w-8 mr-4" />
-                  <h3 className="text-2xl font-bold font-heading">Housing Consultation</h3>
+                <div className="mb-6">
+                  <div className="flex items-center mb-4">
+                    <MessageCircle className="h-8 w-8 mr-4 flex-shrink-0" />
+                    <h3 className="text-2xl font-bold font-heading">Housing Consultation</h3>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">Expert guidance on navigating housing challenges and opportunities.</p>
                 </div>
-                <p className="text-white/90 mb-6">Expert guidance on navigating housing challenges and opportunities.</p>
-                <ul className="space-y-2">
+                
+                <h4 className="text-lg font-semibold mb-3 text-white">Key Features:</h4>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Housing rights information</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Housing rights information to help you understand and advocate for yourself</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Resource navigation</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Resource navigation to connect you with the right programs and services</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
-                    <span>Housing planning</span>
+                    <span className="mr-2 text-white/90 flex-shrink-0 mt-1">✓</span>
+                    <span className="leading-relaxed">Housing planning that addresses both short and long-term goals</span>
                   </li>
                 </ul>
               </div>
