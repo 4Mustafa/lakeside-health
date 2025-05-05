@@ -57,7 +57,7 @@ const ServicesDetailSection = () => {
                   </div>
                 </div>
                 <Link href="/referral#client-info">
-                  <a className="inline-block bg-primary text-[#4ECDC4] hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Request This Service</a>
+                  <a className="inline-block bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">Request This Service</a>
                 </Link>
               </div>
             </div>
