@@ -38,14 +38,6 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2"></i>
-                <span>123 Community Lane<br/>Cityville, State 12345</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-phone-alt mt-1 mr-2"></i>
-                <span>(555) 123-4567</span>
-              </li>
-              <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
                 <span>info@lakesidehealth.org</span>
               </li>
