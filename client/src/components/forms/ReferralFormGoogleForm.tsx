@@ -110,7 +110,7 @@ const ReferralFormGoogleForm = () => {
       
       // Submit to Google Forms using the Fetch API
       const response = await fetch(
-        'https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/formResponse', // Replace with your actual Google Form ID
+        'https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/formResponse', // Google Form ID updated
         {
           method: 'POST',
           mode: 'no-cors', // Important for CORS issues
