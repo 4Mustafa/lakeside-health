@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { scrollToTop } from "@/lib/utils";
 
 import {
   Form,
@@ -51,6 +52,7 @@ type ReferralFormValues = z.infer<typeof referralFormSchema>;
 
 const ReferralForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ReferralFormValues>({
@@ -81,6 +83,7 @@ const ReferralForm = () => {
 
   // Function to handle direct form submission to Google Forms
   const handleGoogleFormSubmit = async (data: ReferralFormValues) => {
+    setIsSubmitting(true);
     try {
       // Set up form object with the data - these field names need to match your Google Form entry IDs
       const formData = new FormData();
@@ -118,6 +121,8 @@ const ReferralForm = () => {
       
       // Since 'no-cors' mode doesn't give us response details, we assume success
       setFormSubmitted(true);
+      // Scroll to the top of the page after form submission
+      scrollToTop();
       toast({
         title: "Referral Submitted",
         description: "We've received your referral and will be in touch soon.",
