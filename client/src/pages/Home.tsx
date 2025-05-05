@@ -2,9 +2,14 @@ import Hero from "@/components/home/Hero";
 import ServiceOverview from "@/components/home/ServiceOverview";
 import WhyPartnerSection from "@/components/home/WhyPartnerSection";
 import EligibilitySection from "@/components/home/EligibilitySection";
-import ReferralFormGoogleForm from "@/components/forms/ReferralFormGoogleForm";
+import { Card } from "@/components/ui/card";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const Home = () => {
+  // Google Form URL - the same one used in the Referral page
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
+  
   return (
     <>
       <Hero />
@@ -20,7 +25,16 @@ const Home = () => {
               <p className="text-lg text-neutral-600">For social workers and case managers to refer clients to our Housing Stabilization Services.</p>
             </div>
             
-            <ReferralFormGoogleForm />
+            <Card className="p-6 bg-neutral-50 rounded-xl shadow-md mb-8">
+              <div className="text-center">
+                <p className="text-lg mb-6">Please use our referral form to submit client information for housing stabilization services.</p>
+                <Link href="/referral">
+                  <Button size="lg" className="font-medium">
+                    Open Referral Form
+                  </Button>
+                </Link>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
