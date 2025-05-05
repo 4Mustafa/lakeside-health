@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
+import { scrollToTop } from "@/lib/utils";
 
 const Referral = () => {
   const formRef = useRef<HTMLDivElement>(null);
@@ -7,6 +8,114 @@ const Referral = () => {
   
   // URL for the embedded Google Form
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
+  
+  // Handler function for form submission
+  const handleFormSubmission = () => {
+    console.log('Form submission detected - scrolling to top');
+    
+    // Scroll immediately and then with delays to ensure it works
+    scrollToTop();
+    
+    // Add redundancy for scrolling with various delays
+    setTimeout(() => scrollToTop(), 100);
+    setTimeout(() => scrollToTop(), 500);
+    setTimeout(() => scrollToTop(), 1500);
+    
+    // Set URL hash to #top to force browser to scroll
+    window.location.hash = 'top';
+    
+    // Force scroll with native methods
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+  
+  // Listen for messages from the iframe (Google Form)
+  useEffect(() => {
+    // This function will handle messages from the iframe
+    const handleMessage = (event: MessageEvent) => {
+      // Check if the message is from our Google Form (or related domains)
+      if (event.origin.includes('google.com')) {
+        // Check if the message indicates form submission
+        // Google form submissions often trigger a redirect or page change
+        if (event.data && typeof event.data === 'string' && 
+            (event.data.includes('formResponse') || event.data.includes('submitted'))) {
+          // Scroll to the top of the page
+          scrollToTop();
+        }
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('message', handleMessage);
+    
+    // Add fallback for form submission detection
+    const checkIframeChanges = () => {
+      try {
+        if (iframeRef.current && iframeRef.current.contentWindow) {
+          // If the iframe URL has changed to include formResponse or thanks
+          const iframeUrl = iframeRef.current.contentWindow.location.href;
+          if (iframeUrl.includes('formResponse') || iframeUrl.includes('thanks')) {
+            handleFormSubmission();
+          }
+          
+          // Try to add listeners directly to form elements in the iframe
+          try {
+            const iframeDocument = iframeRef.current.contentDocument;
+            if (iframeDocument) {
+              // Find form elements
+              const forms = iframeDocument.querySelectorAll('form');
+              forms.forEach(form => {
+                // Use attribute instead of dataset to avoid TypeScript errors
+                if (!form.hasAttribute('data-listener-added')) {
+                  form.addEventListener('submit', () => {
+                    console.log('Form submit detected');
+                    handleFormSubmission();
+                  });
+                  form.setAttribute('data-listener-added', 'true');
+                }
+              });
+              
+              // Find submit buttons
+              const submitButtons = iframeDocument.querySelectorAll('button[type="submit"], input[type="submit"]');
+              submitButtons.forEach(button => {
+                // Use attribute instead of dataset to avoid TypeScript errors
+                if (!button.hasAttribute('data-listener-added')) {
+                  button.addEventListener('click', () => {
+                    console.log('Submit button clicked');
+                    handleFormSubmission();
+                    // Set a flag in sessionStorage to indicate form was submitted
+                    sessionStorage.setItem('formSubmitted', 'true');
+                  });
+                  button.setAttribute('data-listener-added', 'true');
+                }
+              });
+            }
+          } catch (e) {
+            // Ignore cross-origin errors
+          }
+        }
+      } catch (e) {
+        // Ignore cross-origin errors
+      }
+      
+      // Check if the submission flag exists in sessionStorage
+      if (sessionStorage.getItem('formSubmitted') === 'true') {
+        handleFormSubmission();
+        // Clear the flag after using it
+        sessionStorage.removeItem('formSubmitted');
+      }
+    };
+    
+    // Setup interval to check for form submission
+    const interval = setInterval(checkIframeChanges, 500);
+    
+    // Cleanup event listeners
+    return () => {
+      window.removeEventListener('message', handleMessage);
+      clearInterval(interval);
+    };
+  }, []);
   
   return (
     <div id="top" className="pt-8 pb-16 referral-page" style={{ overflow: 'visible' }}>
@@ -43,7 +152,19 @@ const Referral = () => {
               marginWidth={0}
               title="Lakeside Health Referral Form"
               className="block mx-auto referral-iframe"
-              style={{ overflow: 'hidden' }}>
+              style={{ overflow: 'hidden' }}
+              onLoad={(e) => {
+                try {
+                  // Check if the iframe URL indicates form submission completion
+                  const iframe = e.currentTarget;
+                  const iframeUrl = iframe.contentWindow?.location.href;
+                  if (iframeUrl && (iframeUrl.includes('formResponse') || iframeUrl.includes('thanks'))) {
+                    handleFormSubmission();
+                  }
+                } catch (err) {
+                  // Ignore cross-origin errors
+                }
+              }}>
               Loading form...
             </iframe>
           </div>

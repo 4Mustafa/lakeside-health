@@ -21,14 +21,19 @@ export function formatDate(date: Date): string {
 
 // Function to scroll to top of page and all scrollable areas - used after navigation
 export function scrollToTop() {
-  // Scroll main window to top
+  // Force immediate scroll to top using multiple methods
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  
+  // Also try smooth scrolling for better UX
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
   
   // Find all scrollable elements and reset their scroll position
-  setTimeout(() => {
+  const resetAllScrolls = () => {
     // Specific selectors for referral form and page
     const referralSelectors = [
       '.referral-page',
@@ -38,7 +43,8 @@ export function scrollToTop() {
       '.referral-form',
       '.referral-iframe-container',
       '.scrollable',
-      '.iframe'
+      '.iframe',
+      '.referral-iframe'
     ];
     
     // General selectors for potentially scrollable elements
@@ -46,8 +52,10 @@ export function scrollToTop() {
       'div[style*="overflow"]', 
       'div[style*="scroll"]', 
       '.scrollable', 
-      'div[class*="overflow-y"]', 
-      'div[class*="overflow-auto"]'
+      'div[class*="overflow"]',
+      'section', 
+      'main', 
+      'article'
     ];
     
     // Combine all selectors
@@ -69,12 +77,29 @@ export function scrollToTop() {
       try {
         if (iframe.contentWindow) {
           iframe.contentWindow.scrollTo(0, 0);
+          if (iframe.contentDocument) {
+            iframe.contentDocument.documentElement.scrollTop = 0;
+            iframe.contentDocument.body.scrollTop = 0;
+          }
         }
       } catch (e) {
         // Ignore cross-origin errors
       }
     });
-  }, 100); // Small delay to ensure DOM is ready
+    
+    // Also scroll parent elements just to be sure
+    let element = document.documentElement;
+    while (element.parentElement) {
+      element.parentElement.scrollTop = 0;
+      element = element.parentElement;
+    }
+  };
+  
+  // Try immediately and then with increasing delays to ensure it works
+  resetAllScrolls();
+  setTimeout(resetAllScrolls, 100);
+  setTimeout(resetAllScrolls, 500);
+  setTimeout(resetAllScrolls, 1000);
 }
 
 // Function to navigate to a new page and scroll to top
