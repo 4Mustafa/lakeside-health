@@ -26,11 +26,15 @@ const Home = () => {
             </div>
             
             <div className="text-center">
-              <Link href="/referral#top">
-                <Button size="lg" className="font-medium px-8 py-6 text-lg">
-                  Make a Referral
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="font-medium px-8 py-6 text-lg"
+                onClick={() => {
+                  window.location.href = "/referral#top";
+                }}
+              >
+                Make a Referral
+              </Button>
             </div>
           </div>
         </div>

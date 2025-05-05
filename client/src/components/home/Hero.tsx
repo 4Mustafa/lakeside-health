@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -37,13 +37,14 @@ const Hero = () => {
             </p>
             
             <div className="flex justify-center mt-6">
-              <Link href="/referral#top">
-                <div 
-                  className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-12 py-4 rounded-lg transition-all duration-300 text-center cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 max-w-md"
-                >
-                  Make a Referral
-                </div>
-              </Link>
+              <Button
+                className="bg-primary text-white hover:bg-[#4ECDC4] font-semibold px-12 py-6 text-lg rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                onClick={() => {
+                  window.location.href = "/referral#top";
+                }}
+              >
+                Make a Referral
+              </Button>
             </div>
           </div>
         </div>
