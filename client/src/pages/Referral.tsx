@@ -32,24 +32,17 @@ const Referral = () => {
           </div>
           
           <div ref={formRef}>
-            <Card className="p-6 bg-neutral-50 rounded-xl shadow-md">
-              <div className="mb-4 text-neutral-700 text-center">
-                <p>Complete our referral form below to connect your client with our services.</p>
-              </div>
-              <div className="bg-white rounded-md overflow-hidden border border-gray-100">
-                <iframe 
-                  src={googleFormUrl}
-                  width="100%" 
-                  height="1100" 
-                  frameBorder="0" 
-                  marginHeight={0} 
-                  marginWidth={0}
-                  title="Lakeside Health Referral Form"
-                  className="block mx-auto">
-                  Loading form...
-                </iframe>
-              </div>
-            </Card>
+            <iframe 
+              src={googleFormUrl}
+              width="100%" 
+              height="1400" 
+              frameBorder="0" 
+              marginHeight={0} 
+              marginWidth={0}
+              title="Lakeside Health Referral Form"
+              className="block mx-auto">
+              Loading form...
+            </iframe>
           </div>
         </div>
       </div>
