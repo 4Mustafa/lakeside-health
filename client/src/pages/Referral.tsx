@@ -1,11 +1,10 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { scrollToTop } from "@/lib/utils";
 
 const Referral = () => {
   const formRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   
   // URL for the embedded Google Form
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
@@ -13,9 +12,6 @@ const Referral = () => {
   // Handler function for form submission
   const handleFormSubmission = () => {
     console.log('Form submission detected - scrolling to top');
-    
-    // Mark the form as submitted to adjust height
-    setIsFormSubmitted(true);
     
     // Scroll immediately and then with delays to ensure it works
     scrollToTop();
@@ -121,33 +117,6 @@ const Referral = () => {
     };
   }, []);
   
-  // Check iframe URL on mount and when isFormSubmitted changes
-  useEffect(() => {
-    const checkFormState = () => {
-      try {
-        if (iframeRef.current && iframeRef.current.contentWindow) {
-          const iframeUrl = iframeRef.current.contentWindow.location.href;
-          
-          // If the URL contains formResponse or thanks, it means the form was submitted
-          if (iframeUrl.includes('formResponse') || iframeUrl.includes('thanks')) {
-            setIsFormSubmitted(true);
-          } else {
-            // If the form is reloaded or refreshed, reset the form state
-            setIsFormSubmitted(false);
-          }
-        }
-      } catch (e) {
-        // Ignore cross-origin errors
-      }
-    };
-    
-    // Check immediately and after a short delay
-    checkFormState();
-    const timer = setTimeout(checkFormState, 500);
-    
-    return () => clearTimeout(timer);
-  }, [isFormSubmitted]);
-  
   return (
     <div id="top" className="pt-8 pb-16 referral-page" style={{ overflow: 'visible' }}>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 referral-container" style={{ overflow: 'visible' }}>
@@ -172,20 +141,12 @@ const Referral = () => {
             <p className="text-red-600 font-medium border border-red-200 bg-red-50 p-3 rounded-md">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
           </div>
           
-          <div 
-            ref={formRef} 
-            className="referral-iframe-container" 
-            style={{ 
-              overflow: 'hidden',
-              height: isFormSubmitted ? 'auto' : 'auto',
-              maxHeight: isFormSubmitted ? '650px' : 'none',
-              transition: 'max-height 0.5s ease-in-out'
-            }}>
+          <div ref={formRef} className="referral-iframe-container" style={{ overflow: 'hidden' }}>
             <iframe 
               ref={iframeRef}
               src={googleFormUrl}
               width="100%" 
-              height={isFormSubmitted ? "600" : "4000"} 
+              height="4000" 
               frameBorder="0" 
               marginHeight={0} 
               marginWidth={0}
