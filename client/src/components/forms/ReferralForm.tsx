@@ -121,8 +121,18 @@ const ReferralForm = () => {
       
       // Since 'no-cors' mode doesn't give us response details, we assume success
       setFormSubmitted(true);
-      // Scroll to the top of the page after form submission
+      
+      // Scroll all areas to the top after form submission
       scrollToTop();
+      
+      // Force all scrollable containers within the form to reset as well
+      const formContainers = document.querySelectorAll('.referral-form-container [class*="overflow"], .referral-form-container [style*="overflow"]');
+      formContainers.forEach(container => {
+        if (container instanceof HTMLElement) {
+          container.scrollTop = 0;
+        }
+      });
+      
       toast({
         title: "Referral Submitted",
         description: "We've received your referral and will be in touch soon.",
@@ -157,9 +167,9 @@ const ReferralForm = () => {
   }
 
   return (
-    <Card className="bg-neutral-50 rounded-xl shadow-md p-6 md:p-8">
+    <Card className="bg-neutral-50 rounded-xl shadow-md p-6 md:p-8 referral-form-container">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 referral-form">
           {/* Client Information */}
           <div id="client-info" style={{ scrollMarginTop: "100px" }}>
             <h3 className="text-xl font-semibold font-heading text-neutral-800 mb-4">Client Information</h3>

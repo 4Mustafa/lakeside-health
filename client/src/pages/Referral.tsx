@@ -8,9 +8,9 @@ const Referral = () => {
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
   
   return (
-    <div id="top" className="pt-8 pb-16">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+    <div id="top" className="pt-8 pb-16 referral-page">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 referral-container">
+        <div className="max-w-4xl mx-auto referral-content">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Make a Referral</h1>
             <p className="text-lg text-neutral-600">For social workers and service providers to refer clients to our Housing Stabilization Services.</p>
@@ -31,7 +31,7 @@ const Referral = () => {
             <p className="text-red-600 font-medium border border-red-200 bg-red-50 p-3 rounded-md">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
           </div>
           
-          <div ref={formRef}>
+          <div ref={formRef} className="referral-iframe-container scrollable">
             <iframe 
               src={googleFormUrl}
               width="100%" 
@@ -40,7 +40,7 @@ const Referral = () => {
               marginHeight={0} 
               marginWidth={0}
               title="Lakeside Health Referral Form"
-              className="block mx-auto">
+              className="block mx-auto referral-iframe">
               Loading form...
             </iframe>
           </div>
