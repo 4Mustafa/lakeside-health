@@ -11,3 +11,30 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* Custom styles for the referral form and iframe */
+.referral-iframe-container {
+  overflow: visible !important;
+}
+
+.referral-iframe {
+  overflow: visible !important;
+  height: 4000px !important;
+}
+
+/* Make sure no scrollbars appear on these elements */
+.referral-page, 
+.referral-container, 
+.referral-content {
+  overflow: visible !important;
+}
+
+/* Apply to the iframe and its container */
+iframe {
+  overflow: visible !important;
+  scrollbar-width: none; /* Firefox */
+}
+
+iframe::-webkit-scrollbar {
+  display: none; /* Chrome and Safari */
+}

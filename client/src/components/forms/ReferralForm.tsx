@@ -4,12 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { scrollToTop } from "@/lib/utils";
 
-// Add global type declaration for the iframe scroll function
-declare global {
-  interface Window {
-    scrollIframeToTop?: () => void;
-  }
-}
+// No global declarations needed anymore
 
 import {
   Form,

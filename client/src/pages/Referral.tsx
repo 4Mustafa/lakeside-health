@@ -1,12 +1,5 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Card } from "@/components/ui/card";
-
-// Add global type declaration for our custom method
-declare global {
-  interface Window {
-    scrollIframeToTop?: () => void;
-  }
-}
 
 const Referral = () => {
   const formRef = useRef<HTMLDivElement>(null);
@@ -15,29 +8,10 @@ const Referral = () => {
   // URL for the embedded Google Form
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
   
-  // Setup global function to scroll the iframe to top for external access
-  useEffect(() => {
-    // Define a function to scroll the iframe to top
-    window.scrollIframeToTop = () => {
-      try {
-        if (iframeRef.current && iframeRef.current.contentWindow) {
-          iframeRef.current.contentWindow.scrollTo(0, 0);
-        }
-      } catch (e) {
-        // Ignore cross-origin errors
-      }
-    };
-    
-    return () => {
-      // Clean up when component unmounts
-      delete window.scrollIframeToTop;
-    };
-  }, []);
-  
   return (
-    <div id="top" className="pt-8 pb-16 referral-page">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 referral-container">
-        <div className="max-w-4xl mx-auto referral-content">
+    <div id="top" className="pt-8 pb-16 referral-page" style={{ overflow: 'visible' }}>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 referral-container" style={{ overflow: 'visible' }}>
+        <div className="max-w-4xl mx-auto referral-content" style={{ overflow: 'visible' }}>
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Make a Referral</h1>
             <p className="text-lg text-neutral-600">For social workers and service providers to refer clients to our Housing Stabilization Services.</p>
@@ -58,17 +32,18 @@ const Referral = () => {
             <p className="text-red-600 font-medium border border-red-200 bg-red-50 p-3 rounded-md">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
           </div>
           
-          <div ref={formRef} className="referral-iframe-container scrollable">
+          <div ref={formRef} className="referral-iframe-container" style={{ overflow: 'hidden' }}>
             <iframe 
               ref={iframeRef}
               src={googleFormUrl}
               width="100%" 
-              height="1400" 
+              height="4000" 
               frameBorder="0" 
               marginHeight={0} 
               marginWidth={0}
               title="Lakeside Health Referral Form"
-              className="block mx-auto referral-iframe">
+              className="block mx-auto referral-iframe"
+              style={{ overflow: 'hidden' }}>
               Loading form...
             </iframe>
           </div>
