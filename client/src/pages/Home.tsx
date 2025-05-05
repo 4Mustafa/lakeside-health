@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             
             <div className="text-center">
-              <Link href="/referral">
+              <Link href="/referral#top">
                 <Button size="lg" className="font-medium px-8 py-6 text-lg">
                   Make a Referral
                 </Button>

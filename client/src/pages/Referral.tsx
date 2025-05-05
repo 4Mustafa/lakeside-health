@@ -8,7 +8,7 @@ const Referral = () => {
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
   
   return (
-    <div className="pt-8 pb-16">
+    <div id="top" className="pt-8 pb-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
