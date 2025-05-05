@@ -54,13 +54,8 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-neutral-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-neutral-400 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Lakeside Health. All rights reserved.</p>
-            <div className="flex space-x-6">
-              <Link href="/privacy"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Privacy Policy</div></Link>
-              <Link href="/terms"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Terms of Service</div></Link>
-              <Link href="/accessibility"><div className="text-neutral-400 hover:text-[#4ECDC4] text-sm transition-all duration-300 cursor-pointer">Accessibility</div></Link>
-            </div>
+          <div className="flex justify-center items-center">
+            <p className="text-neutral-400 text-sm">&copy; {new Date().getFullYear()} Lakeside Health. All rights reserved.</p>
           </div>
         </div>
       </div>
