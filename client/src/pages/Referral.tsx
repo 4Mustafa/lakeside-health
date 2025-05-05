@@ -28,7 +28,7 @@ const Referral = () => {
               <li>Select all services that might benefit the client</li>
             </ul>
             
-            <p className="text-neutral-600 italic">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
+            <p className="text-red-600 font-medium border border-red-200 bg-red-50 p-3 rounded-md">Note: Our team will review all referrals within 1-2 business days and contact the referring provider to gather any additional information needed before reaching out to the client.</p>
           </div>
           
           <div ref={formRef}>
