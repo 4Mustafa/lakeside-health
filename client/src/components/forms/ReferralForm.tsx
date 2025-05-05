@@ -4,6 +4,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { scrollToTop } from "@/lib/utils";
 
+// Add global type declaration for the iframe scroll function
+declare global {
+  interface Window {
+    scrollIframeToTop?: () => void;
+  }
+}
+
 import {
   Form,
   FormControl,
@@ -122,16 +129,15 @@ const ReferralForm = () => {
       // Since 'no-cors' mode doesn't give us response details, we assume success
       setFormSubmitted(true);
       
-      // Scroll all areas to the top after form submission
-      scrollToTop();
+      // Simple approach: scroll window to top immediately
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
       
-      // Force all scrollable containers within the form to reset as well
-      const formContainers = document.querySelectorAll('.referral-form-container [class*="overflow"], .referral-form-container [style*="overflow"]');
-      formContainers.forEach(container => {
-        if (container instanceof HTMLElement) {
-          container.scrollTop = 0;
-        }
-      });
+      // Also try again after a short delay
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
       
       toast({
         title: "Referral Submitted",

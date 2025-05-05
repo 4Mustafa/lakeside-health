@@ -1,11 +1,38 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
+
+// Add global type declaration for our custom method
+declare global {
+  interface Window {
+    scrollIframeToTop?: () => void;
+  }
+}
 
 const Referral = () => {
   const formRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   
   // URL for the embedded Google Form
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
+  
+  // Setup global function to scroll the iframe to top for external access
+  useEffect(() => {
+    // Define a function to scroll the iframe to top
+    window.scrollIframeToTop = () => {
+      try {
+        if (iframeRef.current && iframeRef.current.contentWindow) {
+          iframeRef.current.contentWindow.scrollTo(0, 0);
+        }
+      } catch (e) {
+        // Ignore cross-origin errors
+      }
+    };
+    
+    return () => {
+      // Clean up when component unmounts
+      delete window.scrollIframeToTop;
+    };
+  }, []);
   
   return (
     <div id="top" className="pt-8 pb-16 referral-page">
@@ -33,6 +60,7 @@ const Referral = () => {
           
           <div ref={formRef} className="referral-iframe-container scrollable">
             <iframe 
+              ref={iframeRef}
               src={googleFormUrl}
               width="100%" 
               height="1400" 
