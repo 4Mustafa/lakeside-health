@@ -84,29 +84,38 @@ const ReferralFormGoogleForm = () => {
   const handleGoogleFormSubmit = async (data: ReferralFormValues) => {
     setIsSubmitting(true);
     try {
-      // Set up form object with the data - these field names need to match your Google Form entry IDs
+      // Instead of trying to map each field individually, we'll create a single consolidated message
+      // This approach works with any Google Form that has at least one text field
+      
+      // Create a formatted string with all the form data
+      const allFormData = `
+CLIENT INFORMATION:
+Name: ${data.client.name}
+Date of Birth: ${data.client.dob}
+Phone: ${data.client.phone}
+Email: ${data.client.email || "Not provided"}
+Address: ${data.client.address || "Not provided"}
+
+REFERRER INFORMATION:
+Name: ${data.referrer.name}
+Organization: ${data.referrer.organization}
+Phone: ${data.referrer.phone}
+Email: ${data.referrer.email}
+
+SERVICES REQUESTED:
+${data.services.transition ? "- Housing Transition Services" : ""}
+${data.services.sustaining ? "- Housing Sustaining Services" : ""}
+${data.services.consultation ? "- Housing Consultation Services" : ""}
+
+ADDITIONAL NOTES:
+${data.notes || "None provided"}
+`;
+      
+      // Set up form object with consolidated data - just need one entry ID from the form
       const formData = new FormData();
       
-      // Client Information
-      formData.append("entry.XXXXX1", data.client.name); // Replace XXXXX1 with actual entry ID
-      formData.append("entry.XXXXX2", data.client.dob);  // Replace XXXXX2 with actual entry ID
-      formData.append("entry.XXXXX3", data.client.phone); // And so on...
-      formData.append("entry.XXXXX4", data.client.email || "");
-      formData.append("entry.XXXXX5", data.client.address || "");
-      
-      // Referring Social Worker Information
-      formData.append("entry.XXXXX6", data.referrer.name);
-      formData.append("entry.XXXXX7", data.referrer.organization);
-      formData.append("entry.XXXXX8", data.referrer.phone);
-      formData.append("entry.XXXXX9", data.referrer.email);
-      
-      // Services Requested
-      formData.append("entry.XXXX10", data.services.transition ? "Housing Transition Services" : "");
-      formData.append("entry.XXXX11", data.services.sustaining ? "Housing Sustaining Services" : "");
-      formData.append("entry.XXXX12", data.services.consultation ? "Housing Consultation Services" : "");
-      
-      // Additional Notes
-      formData.append("entry.XXXX13", data.notes || "");
+      // Use the one entry ID we found for sending all the data
+      formData.append("entry.1052175947", allFormData);
       
       // Submit to Google Forms using the Fetch API
       const response = await fetch(
