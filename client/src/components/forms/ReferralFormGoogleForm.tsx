@@ -80,13 +80,10 @@ const ReferralFormGoogleForm = () => {
     },
   });
 
-  // Function to handle direct form submission to Google Forms
-  const handleGoogleFormSubmit = async (data: ReferralFormValues) => {
+  // Function to handle Google Form submission via direct URL with prefilled values
+  const handleGoogleFormSubmit = (data: ReferralFormValues) => {
     setIsSubmitting(true);
     try {
-      // Instead of trying to map each field individually, we'll create a single consolidated message
-      // This approach works with any Google Form that has at least one text field
-      
       // Create a formatted string with all the form data
       const allFormData = `
 CLIENT INFORMATION:
@@ -111,33 +108,31 @@ ADDITIONAL NOTES:
 ${data.notes || "None provided"}
 `;
       
-      // Set up form object with consolidated data - just need one entry ID from the form
-      const formData = new FormData();
+      // Create URL with parameters for the Google Form
+      const formUrl = new URL('https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform');
       
-      // Use the one entry ID we found for sending all the data
-      formData.append("entry.1052175947", allFormData);
+      // Add the entry parameter with the consolidated data
+      formUrl.searchParams.append('entry.1052175947', allFormData);
       
-      // Submit to Google Forms using the Fetch API
-      const response = await fetch(
-        'https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/formResponse', // Google Form ID updated
-        {
-          method: 'POST',
-          mode: 'no-cors', // Important for CORS issues
-          body: formData
-        }
-      );
+      // Store success state in sessionStorage before redirecting
+      sessionStorage.setItem('referralSubmitted', 'true');
       
-      // Since 'no-cors' mode doesn't give us response details, we assume success
+      // Open the form in a new tab/window
+      window.open(formUrl.toString(), '_blank');
+      
+      // Set local success state
       setFormSubmitted(true);
+      
+      // Show toast notification
       toast({
-        title: "Referral Submitted",
-        description: "We've received your referral and will be in touch soon.",
-        duration: 5000,
+        title: "Referral Form Ready",
+        description: "Your referral information has been prepared. Please submit the form in the new window.",
+        duration: 8000,
       });
     } catch (error: any) {
       toast({
-        title: "Submission Error",
-        description: "There was a problem submitting your referral. Please try again.",
+        title: "Preparation Error",
+        description: "There was a problem preparing your referral. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
@@ -156,9 +151,16 @@ ${data.notes || "None provided"}
         <div className="text-green-500 text-3xl mb-4">
           <CheckCircle2 className="h-12 w-12 mx-auto" />
         </div>
-        <h3 className="text-xl font-semibold font-heading mb-2">Referral Submitted Successfully</h3>
-        <p className="mb-4">Thank you for your referral. Our team will review the information and contact you within 1-2 business days.</p>
-        <p className="text-sm">A confirmation email has been sent to your email address.</p>
+        <h3 className="text-xl font-semibold font-heading mb-2">Referral Form Opened</h3>
+        <p className="mb-4">Your referral information has been transferred to Google Forms. Please complete submission in the newly opened window.</p>
+        <p className="text-sm mb-4">Our team will review the information and contact you within 1-2 business days.</p>
+        <Button 
+          variant="outline" 
+          className="mt-2" 
+          onClick={() => setFormSubmitted(false)}
+        >
+          Return to Form
+        </Button>
       </div>
     );
   }
