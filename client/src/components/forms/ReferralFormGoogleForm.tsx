@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -16,7 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const referralFormSchema = z.object({
@@ -80,7 +80,12 @@ const ReferralFormGoogleForm = () => {
     },
   });
 
-  // Function to handle Google Form submission via direct URL with prefilled values
+  // URL of the embedded Google Form
+  const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true';
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [directSubmitUrl, setDirectSubmitUrl] = useState<string | null>(null);
+  
+  // Function to handle form submission - creates a direct link for manual submission option
   const handleGoogleFormSubmit = (data: ReferralFormValues) => {
     setIsSubmitting(true);
     try {
@@ -108,31 +113,23 @@ ADDITIONAL NOTES:
 ${data.notes || "None provided"}
 `;
       
-      // Create URL with parameters for the Google Form
+      // Create a URL with parameters for manual submission if needed
       const formUrl = new URL('https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform');
-      
-      // Add the entry parameter with the consolidated data
       formUrl.searchParams.append('entry.1052175947', allFormData);
+      setDirectSubmitUrl(formUrl.toString());
       
-      // Store success state in sessionStorage before redirecting
-      sessionStorage.setItem('referralSubmitted', 'true');
-      
-      // Open the form in a new tab/window
-      window.open(formUrl.toString(), '_blank');
-      
-      // Set local success state
+      // Set success state
       setFormSubmitted(true);
       
-      // Show toast notification
       toast({
-        title: "Referral Form Ready",
-        description: "Your referral information has been prepared. Please submit the form in the new window.",
-        duration: 8000,
+        title: "Information Submitted",
+        description: "Your referral information has been submitted. See below for next steps.",
+        duration: 5000,
       });
     } catch (error: any) {
       toast({
-        title: "Preparation Error",
-        description: "There was a problem preparing your referral. Please try again.",
+        title: "Submission Error",
+        description: "There was a problem submitting your referral. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
@@ -145,22 +142,46 @@ ${data.notes || "None provided"}
     handleGoogleFormSubmit(data);
   };
 
+  // Check if the form has been submitted successfully
   if (formSubmitted) {
     return (
-      <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
-        <div className="text-green-500 text-3xl mb-4">
-          <CheckCircle2 className="h-12 w-12 mx-auto" />
+      <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6">
+        <div className="text-center mb-6">
+          <div className="text-green-500 text-3xl mb-4">
+            <CheckCircle2 className="h-12 w-12 mx-auto" />
+          </div>
+          <h3 className="text-xl font-semibold font-heading mb-2">Referral Information Submitted</h3>
+          <p className="mb-2">Thank you for using our referral form. Your information has been successfully processed.</p>
         </div>
-        <h3 className="text-xl font-semibold font-heading mb-2">Referral Form Opened</h3>
-        <p className="mb-4">Your referral information has been transferred to Google Forms. Please complete submission in the newly opened window.</p>
-        <p className="text-sm mb-4">Our team will review the information and contact you within 1-2 business days.</p>
-        <Button 
-          variant="outline" 
-          className="mt-2" 
-          onClick={() => setFormSubmitted(false)}
-        >
-          Return to Form
-        </Button>
+        
+        <div className="bg-white p-5 rounded-lg shadow-sm mb-5 border border-gray-100">
+          <h4 className="font-medium text-gray-800 mb-3 flex items-center">
+            <span>Complete Your Submission</span>
+          </h4>
+          <p className="text-gray-600 mb-4">
+            To complete your referral, please click the button below to open the Google Form with your information pre-filled.
+            You'll just need to review and submit the form.
+          </p>
+          
+          <div className="flex justify-center">
+            <Button
+              className="flex items-center gap-2"
+              onClick={() => window.open(directSubmitUrl!, '_blank')}
+            >
+              Complete in Google Forms <ExternalLink className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        
+        <div className="text-center mt-5">
+          <Button 
+            variant="outline" 
+            size="sm"
+            onClick={() => setFormSubmitted(false)}
+          >
+            Return to Form
+          </Button>
+        </div>
       </div>
     );
   }
