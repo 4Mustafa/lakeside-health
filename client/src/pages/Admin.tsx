@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Download, RefreshCw } from "lucide-react";
+import AdminLogin from "@/components/admin/AdminLogin";
 
 // Define the Referral type for the admin page
 interface Referral {
@@ -27,10 +28,20 @@ interface Referral {
 
 const AdminPage = () => {
   const [exportData, setExportData] = useState<string>("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  
+  // Check if the user is already authenticated
+  useEffect(() => {
+    const authStatus = sessionStorage.getItem("adminAuthenticated");
+    if (authStatus === "true") {
+      setIsAuthenticated(true);
+    }
+  }, []);
   
   // API returns { success: true, data: Referral[] }
   const { data: response, isLoading, isError, refetch } = useQuery<{ success: boolean, data: Referral[] }>({
     queryKey: ['/api/referrals'],
+    enabled: isAuthenticated, // Only fetch data when authenticated
   });
   
   // Extract referrals array from the response
@@ -89,6 +100,16 @@ const AdminPage = () => {
     link.click();
     document.body.removeChild(link);
   };
+  
+  const handleLogout = () => {
+    sessionStorage.removeItem("adminAuthenticated");
+    setIsAuthenticated(false);
+  };
+
+  // If not authenticated, show login form
+  if (!isAuthenticated) {
+    return <AdminLogin onLogin={() => setIsAuthenticated(true)} />;
+  }
 
   if (isLoading) {
     return (
@@ -131,6 +152,13 @@ const AdminPage = () => {
           <Button onClick={downloadCSV} className="flex items-center gap-2 bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md" disabled={!referrals || referrals.length === 0}>
             <Download className="h-4 w-4" />
             Export to Excel (CSV)
+          </Button>
+          <Button 
+            onClick={handleLogout} 
+            variant="outline" 
+            className="border border-red-400 text-red-500 hover:bg-red-50 hover:text-red-600"
+          >
+            Log Out
           </Button>
         </div>
       </div>
