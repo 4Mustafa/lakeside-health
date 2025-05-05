@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import ReferralForm from "@/components/forms/ReferralForm";
+import ReferralFormGoogleForm from "@/components/forms/ReferralFormGoogleForm";
 
 const Referral = () => {
   const clientInfoRef = useRef<HTMLDivElement>(null);
@@ -52,7 +52,7 @@ const Referral = () => {
           </div>
           
           <div ref={clientInfoRef}>
-            <ReferralForm />
+            <ReferralFormGoogleForm />
           </div>
         </div>
       </div>

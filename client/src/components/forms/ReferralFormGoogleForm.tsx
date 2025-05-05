@@ -49,8 +49,9 @@ const referralFormSchema = z.object({
 
 type ReferralFormValues = z.infer<typeof referralFormSchema>;
 
-const ReferralForm = () => {
+const ReferralFormGoogleForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ReferralFormValues>({
@@ -81,6 +82,7 @@ const ReferralForm = () => {
 
   // Function to handle direct form submission to Google Forms
   const handleGoogleFormSubmit = async (data: ReferralFormValues) => {
+    setIsSubmitting(true);
     try {
       // Set up form object with the data - these field names need to match your Google Form entry IDs
       const formData = new FormData();
@@ -123,13 +125,15 @@ const ReferralForm = () => {
         description: "We've received your referral and will be in touch soon.",
         duration: 5000,
       });
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "Submission Error",
         description: "There was a problem submitting your referral. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -429,7 +433,7 @@ const ReferralForm = () => {
                 </FormControl>
                 <div className="ml-2 block">
                   <FormLabel className="text-neutral-600 text-sm">
-                    I confirm that I have obtained the client's consent to share their information for the purpose of this referral, and that they understand how their information will be used.
+                    I confirm that I have obtained the client's consent to share their information with Lakeside Health.
                   </FormLabel>
                   <FormMessage />
                 </div>
@@ -438,13 +442,13 @@ const ReferralForm = () => {
           />
 
           {/* Submit Button */}
-          <div className="pt-4">
+          <div className="pt-2">
             <Button 
               type="submit" 
-              className="w-full bg-primary text-white hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
-              disabled={submitReferral.isPending}
+              className="w-full bg-primary hover:bg-primary/90 text-white py-3"
+              disabled={isSubmitting}
             >
-              {submitReferral.isPending ? "Submitting..." : "Submit Referral"}
+              {isSubmitting ? "Submitting..." : "Submit Referral"}
             </Button>
           </div>
         </form>
@@ -453,4 +457,4 @@ const ReferralForm = () => {
   );
 };
 
-export default ReferralForm;
+export default ReferralFormGoogleForm;

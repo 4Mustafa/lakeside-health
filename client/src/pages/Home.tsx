@@ -2,7 +2,7 @@ import Hero from "@/components/home/Hero";
 import ServiceOverview from "@/components/home/ServiceOverview";
 import WhyPartnerSection from "@/components/home/WhyPartnerSection";
 import EligibilitySection from "@/components/home/EligibilitySection";
-import ReferralForm from "@/components/forms/ReferralForm";
+import ReferralFormGoogleForm from "@/components/forms/ReferralFormGoogleForm";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
               <p className="text-lg text-neutral-600">For social workers and case managers to refer clients to our Housing Stabilization Services.</p>
             </div>
             
-            <ReferralForm />
+            <ReferralFormGoogleForm />
           </div>
         </div>
       </section>
