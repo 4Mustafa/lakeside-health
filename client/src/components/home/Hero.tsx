@@ -17,8 +17,8 @@ const Hero = () => {
           <div className="bg-primary/5 rounded-xl shadow-sm border border-primary/10 p-8 flex flex-col">
             <h3 className="text-xl font-bold mb-4 text-primary">A Reliable Housing Partner for Your Client Referrals</h3>
             
-            <div className="bg-[#4ECDC4]/10 border-l-4 border-[#4ECDC4] p-4 mb-6 rounded-r-md h-[100px] flex flex-col justify-center">
-              <p className="font-semibold text-primary flex items-center">
+            <div className="bg-red-50 border border-red-200 p-4 mb-6 rounded-md h-auto flex flex-col justify-center">
+              <p className="font-semibold text-red-600 flex items-center text-lg">
                 <span className="mr-2">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
