@@ -37,12 +37,13 @@ const Hero = () => {
             </p>
             
             <div className="flex justify-center mt-6">
-              <div 
-                onClick={() => window.location.href = '/#referral'}
-                className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-12 py-4 rounded-lg transition-all duration-300 text-center cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 max-w-md"
-              >
-                Make a Referral
-              </div>
+              <Link href="/referral#top">
+                <div 
+                  className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-12 py-4 rounded-lg transition-all duration-300 text-center cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 max-w-md"
+                >
+                  Make a Referral
+                </div>
+              </Link>
             </div>
           </div>
         </div>
