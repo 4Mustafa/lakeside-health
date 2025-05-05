@@ -122,7 +122,7 @@ const AdminPage = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-neutral-800 mb-4 md:mb-0">Referral Submissions</h1>
+        <h1 className="text-3xl font-bold text-neutral-800 mb-4 md:mb-0">Admin</h1>
         <div className="flex space-x-4">
           <Button onClick={() => refetch()} variant="outline" className="flex items-center gap-2 border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-md">
             <RefreshCw className="h-4 w-4" />
