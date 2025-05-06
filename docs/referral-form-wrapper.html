@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakeside Health Referral Form</title>
+</head>
+<body style="margin:0;padding:0;overflow:hidden;">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true"
+    width="100%"
+    height="1600"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    style="border:none; overflow:hidden;"
+  >Loading…</iframe>
+
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.origin.includes('docs.google.com')) {
+        window.parent.postMessage(event.data, '*');
+      }
+    });
+  </script>
+</body>
+</html>
