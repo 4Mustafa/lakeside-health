@@ -36,7 +36,6 @@ const Footer = () => {
               <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Transition</div></li>
               <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Sustaining</div></li>
               <li><div onClick={() => navigateTo("/services")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Housing Consultation</div></li>
-              <li><div onClick={() => navigateTo("/admin")} className="text-neutral-300 hover:text-[#4ECDC4] transition-all duration-300 cursor-pointer">Admin</div></li>
             </ul>
           </div>
           
