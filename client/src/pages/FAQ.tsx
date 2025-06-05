@@ -77,9 +77,12 @@ const FAQ = () => {
               If you couldn't find the answer you were looking for, please don't hesitate to reach out to our team directly. We're here to help!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact">
-                <div className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Contact Us</div>
-              </Link>
+           <a
+  href="mailto:lakesidehealthmn@gmail.com"
+  className="bg-primary text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105"
+>
+  Contact Us
+</a>
               <Link href="/#referral">
                 <div className="bg-white border border-primary text-primary hover:text-white hover:bg-[#4ECDC4] hover:border-transparent font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105">Make a Referral</div>
               </Link>

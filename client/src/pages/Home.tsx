@@ -4,11 +4,13 @@ import WhyPartnerSection from "@/components/home/WhyPartnerSection";
 import EligibilitySection from "@/components/home/EligibilitySection";
 import { navigateTo } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 const Home = () => {
   // Google Form URL - the same one used in the Referral page
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfwlTQbIV3BeQmz2FKy8sMdpkNAXitDj1KXUf_3-qeWzhwvhw/viewform?embedded=true";
-  
+  const [, setLocation] = useLocation();
+
   return (
     <>
       <Hero />
@@ -28,7 +30,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 className="font-medium px-8 py-6 text-lg"
-                onClick={() => navigateTo("/referral")}
+                onClick={() => setLocation("/referral")}
               >
                 Make a Referral
               </Button>
