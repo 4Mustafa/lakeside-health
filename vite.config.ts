@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
-  base: '/lakeside-health/',
+base: '/', // Remove if not needed
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -32,7 +32,7 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+  outDir: path.resolve(__dirname, "dist"), // Vercel looks here by default
     emptyOutDir: true,
   },
 });
